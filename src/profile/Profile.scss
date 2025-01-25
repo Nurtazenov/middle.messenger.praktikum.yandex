@@ -1,0 +1,31 @@
+#app{
+.main_profile{
+    text-align: center;
+    .card{
+        border-color: black;
+        width: 440px;
+        height: 950px;
+        top: 135px;
+        padding: 10px;
+        border-radius: 15px;
+        border-width: 5px;
+    }   
+}
+p{
+    text-align: left;
+    margin: 20px 20px;
+    
+}
+hr{
+    width: 410px;
+}
+img{
+    margin: 20px 20px;
+
+    margin-left: 32%;
+    width: 150px;
+    border-radius: 35px;
+    border: 1px solid;
+}
+
+}
