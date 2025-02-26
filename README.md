@@ -89,3 +89,9 @@ README — первое, что прочитает пользователь, к�
 В проекте использовался макет из Figma: https://www.figma.com/design/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0-1&p=f&t=5xkTgGHqRpvriEa0-0
 
 Проет задеплоин на сайте Netlify: https://middle-messenger-praktikum-yandex-an.netlify.app/
+Инструменты:
+Stylelint
+editorconfig
+ESLint
+Vite
+TypeScript
