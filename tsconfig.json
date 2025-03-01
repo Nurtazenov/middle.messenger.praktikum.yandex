@@ -1,12 +1,5 @@
 {
     "compilerOptions": {
-      "alwaysStrict": true,
-      "noImplicitAny": true,
-      "strictNullChecks": true,
-      "strictPropertyInitialization": true,
-      "strictFunctionTypes": true,
-      "noImplicitThis": true,
-      "strictBindCallApply": true,
+"noImplicitAny": true
     },
-  "include": ["src", "src/main.ts"]
 }
