@@ -1,20 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "strict": true,
-    "noImplicitAny": true, 
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "target": "es6",                          // Указывает целевую версию JavaScript
+    "module": "commonjs",                     // Указывает систему модулей
+    "strict": true,                           // Включает строгий режим проверки типов
+    "esModuleInterop": true,                  // Разрешает совместное использование модулей ES
+    "skipLibCheck": true,                     // Пропускать проверку типов в файлах библиотек
+    "forceConsistentCasingInFileNames": true // Обеспечить согласованность регистров имён файлов
   },
-  "include": ["src", "src/main.ts"]
+  "include": [
+    "src/**/*"                                // Указывает, какие файлы компилировать
+  ],
+  "exclude": [
+    "node_modules",                           // Исключает папку с зависимостями
+    "**/*.spec.ts"                            // Исключает файлы с тестами (опционально)
+  ]
 }
