@@ -1,5 +1,6 @@
 {
   "extends": [
+    "stylelint-config-recommended-scss",
     "stylelint-config-standard",
     "stylelint-scss",
     "configBasedir"
