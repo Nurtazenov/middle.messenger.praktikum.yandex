@@ -12,20 +12,24 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "sass-embedded": "^1.83.4",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.8",
-    "vite-plugin-handlebars": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
-    "stylelint": "^16.14.1"
+    "sass-embedded": "^1.83.4",
+    "stylelint": "^16.14.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
     "handlebars": "^4.7.8",
     "netlify": "^13.3.3",
     "netlify-cli": "^19.0.0",
     "path": "^0.12.7",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "stylelint-config-standard": "^37.0.0"
   }
 }
+
+
+
