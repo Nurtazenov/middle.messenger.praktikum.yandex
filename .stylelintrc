@@ -1,5 +1,8 @@
 {
   "extends": "stylelint-config-recommended-scss",
+  "plugins": [
+    "stylelint-plugin-bem"
+  ],
   "rules": {
     "no-descending-specificity": null,
     "scss/dollar-variable-pattern": null,
