@@ -1,5 +1,6 @@
 {
-  "extends": "stylelint-config-recommended-scss",
+  "extends": ["stylelint-config-recommended-scss",
+  "stylelint-plugin-bem"],
   "plugins": [
     "stylelint-plugin-bem"
   ],
