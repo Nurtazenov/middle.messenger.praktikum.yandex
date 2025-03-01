@@ -11,3 +11,4 @@ document.querySelector<HTMLDivElement>('#nav')!.innerHTML = `
          </div>
         
     `
+    
