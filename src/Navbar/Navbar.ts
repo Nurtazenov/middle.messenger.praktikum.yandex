@@ -1,3 +1,4 @@
+
 import './Navbar.scss'
 
 document.querySelector<HTMLDivElement>('#nav')!.innerHTML = `
@@ -15,4 +16,3 @@ document.querySelector<HTMLDivElement>('#nav')!.innerHTML = `
 
 
 
-    
