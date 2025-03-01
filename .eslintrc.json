@@ -6,5 +6,6 @@
       "max-len": [2, 100],
       "max-params":[2,3],
       "@typescript-eslint/no-unused-vars": 2,
+      "eol-last": ["error", "always"]
       }
   } 
