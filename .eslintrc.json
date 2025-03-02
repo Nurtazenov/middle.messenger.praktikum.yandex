@@ -10,9 +10,7 @@
     "scss/dollar-variable-pattern": "^foo",
     "scss/selector-no-redundant-nesting-selector": true
   },
-  "ignoreFiles": [
-    "build/*"
-  ]
+
 }
 
 
