@@ -4,7 +4,7 @@
     "stylelint-scss"
   ],
   "rules": {
-    "scss/at-rule-no-unknown": 0,
+    "scss/at-rule-no-unknown": 1,
     "scss/dollar-variable-pattern":0,
     "scss/selector-no-redundant-nesting-selector": 0
   }
