@@ -1,2 +1,5 @@
 
 
+export interface IInput{
+    
+}
