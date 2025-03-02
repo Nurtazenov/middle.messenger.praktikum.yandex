@@ -1,20 +1,16 @@
 {
-  "extends": [
-  "stylelint-plugin-bem",
-"stylelint-config-recommended-scss"],
+  "extends": "stylelint-config-standard",
   "plugins": [
-    "stylelint-plugin-bem"
+    "stylelint-scss"
   ],
   "rules": {
-    "no-descending-specificity": null,
-    "scss/dollar-variable-pattern": null,
-    "scss/at-if-no-null": null,
-    "plugin/selector-bem-pattern": {
-      "preset": "bem",
-      "componentSelectors": "bemSelector"
-    }
+    "color-hex-case": "lower",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true
   },
-  "ignoreFiles": "['build]"
+  "ignoreFiles": [
+    "build/*"
+  ]
 }
-
-
