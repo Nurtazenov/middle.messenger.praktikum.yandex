@@ -1,0 +1,11 @@
+{
+    "stylelint.enable": true,
+    "stylelint.run": "onType",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": true
+    },
+    "files.associations": {
+      "*.scss": "scss"
+    }
+  }
+  
