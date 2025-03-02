@@ -1,13 +1,6 @@
 
 
-
-
-export function set(element: HTMLDivElement) {
+export function setInput(element: HTMLDivElement) {
     element.innerHTML = ``
   }
-  
-
-
-
-
   
