@@ -5,7 +5,7 @@
   "rules": {
     "max-len": [2, 100],
     "@typescript-eslint/no-unused-vars": 2,
-    "typescript-eslint/ban-ts-comment":0,
+    "typescript-eslint/ban-ts-comment":0
   }
 }
 
