@@ -1,13 +1,11 @@
-// {
-//   "extends": "airbnb",
-//   "rules": {
-//     "no-empty-file":0,
-//     "scss/at-rule-no-unknown": 1,
-//     "scss/dollar-variable-pattern":0,
-//     "scss/selector-no-redundant-nesting-selector": 0
-//   }
-// }
-
-
+{
+  "extends": "airbnb",
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "max-len": [2, 100],
+    "@typescript-eslint/no-unused-vars": 2,
+    }
+} 
 
 
