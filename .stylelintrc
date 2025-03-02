@@ -5,7 +5,7 @@
   ],
   "rules": {
     "string-no-newline": true,
-     "no-empty-source":false,
+     "no-empty-source":null,
     "color-no-invalid-hex": true,
     "at-rule-no-unknown": [
       true,
