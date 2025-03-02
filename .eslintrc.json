@@ -1,12 +1,12 @@
-{
-  "extends": "airbnb",
-  "rules": {
-    "no-empty-file":0,
-    "scss/at-rule-no-unknown": 1,
-    "scss/dollar-variable-pattern":0,
-    "scss/selector-no-redundant-nesting-selector": 0
-  }
-}
+// {
+//   "extends": "airbnb",
+//   "rules": {
+//     "no-empty-file":0,
+//     "scss/at-rule-no-unknown": 1,
+//     "scss/dollar-variable-pattern":0,
+//     "scss/selector-no-redundant-nesting-selector": 0
+//   }
+// }
 
 
 
