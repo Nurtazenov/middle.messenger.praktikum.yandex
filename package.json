@@ -17,6 +17,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "sass-embedded": "^1.83.4",
     "stylelint": "^16.15.0",
+    "stylelint-config-standard": "^37.0.0",
     "stylelint-scss": "^6.11.1",
     "typescript": "^5.2.2",
     "vite": "^6.2.0",
@@ -29,10 +30,6 @@
     "netlify-cli": "^16.4.2",
     "path": "^0.12.7",
     "scss": "^0.2.4",
-    "stylelint-config-recommended-scss": "^14.1.0",
-    "stylelint-config-standard": "^37.0.0"
+    "stylelint-config-recommended-scss": "^14.1.0"
   }
 }
-
-
-
