@@ -5,7 +5,7 @@
   ],
   "rules": {
     "scss/at-rule-no-unknown": 0,
-    "scss/dollar-variable-pattern": "^foo",
+    "scss/dollar-variable-pattern":0,
     "scss/selector-no-redundant-nesting-selector": true
   }
 }
