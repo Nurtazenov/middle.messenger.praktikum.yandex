@@ -3,5 +3,9 @@
     "browser": true,
     "node": true
   },
-  "extends": "eslint:recommended"
+  "extends": "eslint:recommended",
+  "rules":{
+    "@typescript-eslint/ban-ts-comment" : 0
+  }
+
 }
