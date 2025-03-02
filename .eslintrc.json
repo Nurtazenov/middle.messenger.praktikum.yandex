@@ -1,11 +1,21 @@
 {
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "extends": "eslint:recommended",
-  "rules":{
-    "@typescript-eslint/ban-ts-comment" : 2
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "ignorePatterns": "node_modules/",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "google"
+  ],
+  "rules": {
+    "no-unused-vars": 2,
+    "max-len": [
+      1,
+      100
+    ],
+    "max-params": [
+      2,
+      3
+    ]
   }
-
 }
