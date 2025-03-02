@@ -1,6 +1,7 @@
 #app{
 .main_profile{
     text-align: center;
+
     .card{
         border-color: black;
         width: 440px;
@@ -11,17 +12,19 @@
         border-width: 5px;
     }   
 }
+
 p{
     text-align: left;
-    margin: 20px 20px;
+    margin: 20px;
     
 }
+
 hr{
     width: 410px;
 }
-img{
-    margin: 20px 20px;
 
+img{
+    margin: 20px;
     margin-left: 32%;
     width: 150px;
     border-radius: 35px;
