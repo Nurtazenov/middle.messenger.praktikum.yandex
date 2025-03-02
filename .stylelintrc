@@ -4,7 +4,6 @@
     "stylelint-scss"
   ],
   "rules": {
-    "number-no-trailing-zeros": true,
     "string-no-newline": true,
     "color-no-invalid-hex": true,
     "at-rule-no-unknown": [
