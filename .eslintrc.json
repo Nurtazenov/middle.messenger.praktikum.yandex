@@ -1,8 +1,5 @@
 {
   "extends": "airbnb",
-  "plugins": [
-    "stylelint-scss"
-  ],
   "rules": {
     "scss/at-rule-no-unknown": 1,
     "scss/dollar-variable-pattern":0,
