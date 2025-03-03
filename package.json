@@ -10,7 +10,7 @@
     "dev": "vite --port 3000",
     "start": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint ."
+    "lint": "eslintrc.json"
   },
   "devDependencies": {
     "@types/ungap__structured-clone": "^1.2.0",
