@@ -1,7 +1,6 @@
 import handlebars from 'vite-plugin-handlebars';
-import {defineConfig} from 'vite'
 import path from 'path'
-export default defineConfig({
+export default {
   
   optimizeDeps: {
     include: ['handlebars'] 
@@ -9,16 +8,16 @@ export default defineConfig({
   },
 
   build:{
-    outDir:path.resolve(__dirname, 'dist'),
+    outDir:path.resolve("__dirname", 'dist'),
     emptyOutDir: true,
   },
   
   plugins: [
     handlebars({
-      partialDirectory: path.resolve(__dirname, 'src/partials'),
+      partialDirectory: path.resolve("__dirname", "src/partials"),
       context: {
-        title: 'Hello Yandex Practicum!',
+        title: "Hello Yandex Practicum!",
       },
     }),
   ],
-});
+};
