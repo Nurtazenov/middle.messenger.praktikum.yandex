@@ -1,5 +1,4 @@
 import "./auth.scss";
-import Handlebars from "handlebars";
 export function setRegister(element: HTMLDivElement) {
     
   element.innerHTML = `

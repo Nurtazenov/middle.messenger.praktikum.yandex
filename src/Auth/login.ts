@@ -1,5 +1,3 @@
-import "./auth.scss";
-import Handlebars from "handlebars";
 export function setLogin(element: HTMLDivElement) {
   element.innerHTML = `
    <div class="container">
