@@ -1,4 +1,4 @@
-document.querySelector<HTMLDivElement>('')!.innerHTML =`
+document.querySelector<HTMLDivElement>('')!.innerHTML = `
     <div>
     
         <fieldset>
@@ -13,5 +13,4 @@ document.querySelector<HTMLDivElement>('')!.innerHTML =`
             <button>Сохранить</button>
         </fieldset>
     </div>
-`
-
+`;

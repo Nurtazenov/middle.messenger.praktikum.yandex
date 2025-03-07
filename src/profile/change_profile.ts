@@ -1,4 +1,4 @@
-document.querySelector<HTMLDivElement>('')!.innerHTML =`
+document.querySelector<HTMLDivElement>('')!.innerHTML = `
     <div>
         <fieldset>
     <legend>
@@ -36,6 +36,4 @@ document.querySelector<HTMLDivElement>('')!.innerHTML =`
         </fieldset>
     </div>
 
-`
-
-
+`;

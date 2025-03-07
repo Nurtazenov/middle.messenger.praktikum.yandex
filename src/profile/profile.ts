@@ -1,7 +1,7 @@
-import './Profile.scss'
-export function setProfile(element: HTMLDivElement) {
+import './Profile.scss';
 
-      element.innerHTML = `
+export function setProfile(element: HTMLDivElement) {
+  element.innerHTML = `
     <section class="main_profile">
         <fieldset class="card">
             <legend>
@@ -34,8 +34,5 @@ export function setProfile(element: HTMLDivElement) {
         </fieldset>
     </section>
 
-`
+`;
 }
-
-
-

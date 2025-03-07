@@ -1,5 +1,4 @@
-
-import './Navbar.scss'
+import './Navbar.scss';
 
 document.querySelector<HTMLDivElement>('#nav')!.innerHTML = `
     <div class = "main">
@@ -11,8 +10,4 @@ document.querySelector<HTMLDivElement>('#nav')!.innerHTML = `
     </div>
          </div>
         
-    `
-
-
-
-
+    `;

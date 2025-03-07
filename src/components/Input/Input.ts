@@ -1,6 +1,3 @@
-
-
 export function setInput(element: HTMLDivElement) {
-    element.innerHTML = ``
-  }
-  
+  element.innerHTML = '';
+}

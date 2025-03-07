@@ -20,15 +20,14 @@ export function setLogin(element: HTMLDivElement) {
         </form>
     </div>
 `;
-const form = document.getElementById('getLog') as HTMLFormElement;
-form.addEventListener('submit',function(event:any){
+  const form = document.getElementById('getLog') as HTMLFormElement;
+  form.addEventListener('submit', (event:any) => {
     event.preventDefault();
     const formData = new FormData(form);
-    const data:Record<string,string> = {};
+    const data:Record<string, string> = {};
     formData.forEach((value, key) => {
-        data[key] = value.toString();
-});
-    console.log(data)
-})
+      data[key] = value.toString();
+    });
+    console.log(data);
+  });
 }
-

@@ -13,5 +13,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     </form>
     </footer>
   </div>
-`
-
+`;

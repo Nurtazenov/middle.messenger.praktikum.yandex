@@ -1,5 +1,5 @@
-import "./main.scss"
-import { setProfile } from './profile/profile.ts'
+import './main.scss';
+import { setProfile } from './profile/profile.ts';
 import { setRegister } from './Auth/register.ts';
 
 const isUserActive:boolean = false;
@@ -12,13 +12,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
    </section>
   </div>
 
-`
-if (isUserActive !== false){
-  setProfile(document.querySelector<HTMLDivElement>('#main')!)
-} else if(isUserActive === false){
+`;
+if (isUserActive !== false) {
+  setProfile(document.querySelector<HTMLDivElement>('#main')!);
+} else if (isUserActive === false) {
   // setLogin(document.querySelector<HTMLDivElement>('#main')!)
-  setRegister(document.querySelector<HTMLDivElement>('#main')!)
+  setRegister(document.querySelector<HTMLDivElement>('#main')!);
 }
-
-
-

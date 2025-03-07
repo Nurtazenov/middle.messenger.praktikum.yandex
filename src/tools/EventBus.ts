@@ -1,40 +1,38 @@
 type TCallback = (...args: object[]) => void;
 type TListeners = Record<string, TCallback[]>;
 class EventBus {
-    listeners:TListeners
-    constructor() {
-        this.listeners = {};
-    }
+  listeners:TListeners;
 
-    on(event:string, callback:TCallback) {
-        if (!this.listeners[event]) {
-            this.listeners[event] = [];
-        }
-
-        this.listeners[event].push(callback);
+  constructor() {
+    this.listeners = {};
   }
 
-    off(event:string, callback:TCallback) {
-        if (!this.listeners[event]) {
+  on(event:string, callback:TCallback) {
+    if (!this.listeners[event]) {
+      this.listeners[event] = [];
+    }
+
+    this.listeners[event].push(callback);
+  }
+
+  off(event:string, callback:TCallback) {
+    if (!this.listeners[event]) {
       throw new Error(`Нет события: ${event}`);
     }
 
     this.listeners[event] = this.listeners[event].filter(
-      listener => listener !== callback
+      (listener) => listener !== callback,
     );
   }
 
-    emit(event:string, ...args:object[]) {
-        if (!this.listeners[event]) {
-                throw new Error(`Нет события: ${event}`);
-        }
-
-        this.listeners[event].forEach(listener => {
-            listener(...args);
-        });
+  emit(event:string, ...args:object[]) {
+    if (!this.listeners[event]) {
+      throw new Error(`Нет события: ${event}`);
     }
+
+    this.listeners[event].forEach((listener) => {
+      listener(...args);
+    });
+  }
 }
 export default EventBus;
-
-
-
