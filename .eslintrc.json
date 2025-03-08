@@ -20,5 +20,5 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "jest/no-disabled-tests": "warn",
     "jest/no-identical-title": "error"
-  }
+  }
 }
