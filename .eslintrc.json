@@ -1,17 +1,24 @@
 {
-"plugins": ["@typescript-eslint"],
-"ignorePatterns": "node_modules/",
-"extends": "airbnb",
-"rules": {
-  "no-unused-vars": 2,
-  "max-len": [
-    1,
-    100
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jest/recommended"
   ],
-  "max-params": [
-    2,
-    3
-  ]
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest/globals": true
+  },
+  "plugins": ["@typescript-eslint", "jest"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-identical-title": "error"
+  }
 }
-}
-
