@@ -1,11 +1,7 @@
 {
 "plugins": ["@typescript-eslint"],
 "ignorePatterns": "node_modules/",
-"extends": [
-  "eslint:recommended",
-  "plugin:@typescript-eslint/recommended",
-  "airbnb"
-],
+"extends": "airbnb",
 "rules": {
   "no-unused-vars": 2,
   "max-len": [
@@ -18,3 +14,4 @@
   ]
 }
 }
+
