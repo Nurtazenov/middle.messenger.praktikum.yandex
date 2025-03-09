@@ -12,8 +12,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "eslint": "^9.22.0",
     "@typescript-eslint/parser": "^8.26.0",
+    "eslint": "^9.22.0",
     "sass-embedded": "^1.83.4",
     "stylelint": "^16.15.0",
     "typescript": "^5.2.2",
@@ -25,6 +25,7 @@
     "netlify": "^13.3.3",
     "netlify-cli": "^18.0.3",
     "path": "^0.12.7",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "stylelint-config-standard": "^37.0.0"
   }
 }
