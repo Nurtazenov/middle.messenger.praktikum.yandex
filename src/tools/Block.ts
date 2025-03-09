@@ -30,7 +30,7 @@ class Block {
     eventBus.emit(Block.EVENTS.INIT);
   }
 
-  private _registerEvents(eventBus: EventBus): void {
+  _registerEvents(eventBus: EventBus) {
     eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
@@ -57,14 +57,13 @@ class Block {
     this.eventBus.emit(Block.EVENTS.FLOW_CDM);
   }
 
-  private _componentDidUpdate(oldProps: Props): void {
-    const response = this.componentDidUpdate(oldProps, this.props);
-    if (response) {
+  private _componentDidUpdate() {
+    if (this.componentDidUpdate()) {
       this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
     }
   }
 
-  componentDidUpdate(oldProps: Props, newProps: Props): boolean {
+  componentDidUpdate(){
     return true;
   }
 
