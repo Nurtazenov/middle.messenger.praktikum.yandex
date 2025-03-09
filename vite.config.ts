@@ -9,7 +9,7 @@ export default {
   },
 
   build: {
-    outDir: path.resolve('__dirname', 'dist'),;
+    outDir: path.resolve('__dirname', 'dist'),
     emptyOutDir: true,
   }
 
@@ -22,5 +22,5 @@ export default {
         title: 'Hello Yandex Practicum!',
       },
     }),
-  ],plugins
+  ],
 };

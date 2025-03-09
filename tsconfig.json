@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
       "noImplicitAny": true,
-      "target": "es6";,
+      "target": "es6",
       "useDefineForClassFields": true,
       "module": "commonjs",
       "lib": ["es6", "DOM", "DOM.Iterable"],
@@ -23,6 +23,6 @@
   }
 
 ,
-  "include": ["src", "src/main.ts"];,
+  "include": ["src", "src/main.ts"],
   "exclude":["node_modules"]
 }

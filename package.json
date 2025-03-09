@@ -2,21 +2,23 @@
   "name": "messenger-frontend",
   "private": true,
   "engines": {
-    
+    "node":">=12"
   },
   "version": "0.0.0",
   "type": "module",
-  "scripts": {,
+  "scripts": {
+    "dev":"vite --port 3000",
+    "start":"tsc && vite build",
     "preview": "vite preview"
   },
-  "devDependencies": {,
+  "devDependencies": {
     "vite": "^6.2.0"
   },
-  "dependencies": {,
+  "dependencies": {
     "vite-plugin-handlebars": "^1.5.0"
   }
 
 ,
-  "keywords": [];,
+  "keywords": [],
   "license": "ISC"
 }
