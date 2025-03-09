@@ -13,7 +13,7 @@ type Options = {
   timeout?: number;
 };
 
-function queryStringify(data: object): string {
+function queryStringify(data: Record<string, string | number | boolean>): string {
   if (typeof data !== 'object' || data === null) {
     throw new Error('Data must be an object');
   }
