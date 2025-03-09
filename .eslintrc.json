@@ -16,7 +16,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "unknown",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "jest/no-disabled-tests": "warn",
     "jest/no-identical-title": "error"
