@@ -1,8 +1,8 @@
 import EventBus from './EventBus';
 
 interface BlockMeta {
-    tagName: string;
-    props: Record<string, any>;
+  tagName: string;
+  props: Record<string, any>;
 }
 
 type Props = Record<string, any>;
@@ -16,58 +16,51 @@ class Block {
   };
 
   private _element: HTMLElement | null = null;
-
   private _meta: BlockMeta;
-
   public props: Props;
-
-  private eventBus: () => EventBus;
+  private eventBus: EventBus;
 
   constructor(tagName: string = 'div', props: Props = {}) {
     const eventBus = new EventBus();
-    this._meta = {
-      tagName,
-      props,
-    };
-
+    this._meta = { tagName, props };
     this.props = this._makePropsProxy(props);
-    this.eventBus = () => eventBus;
+    this.eventBus = eventBus;
 
     this._registerEvents(eventBus);
     eventBus.emit(Block.EVENTS.INIT);
   }
 
-  private _registerEvents(eventBus: EventBus) {
+  private _registerEvents(eventBus: EventBus): void {
     eventBus.on(Block.EVENTS.INIT, this.init.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDM, this._componentDidMount.bind(this));
     eventBus.on(Block.EVENTS.FLOW_CDU, this._componentDidUpdate.bind(this));
     eventBus.on(Block.EVENTS.FLOW_RENDER, this._render.bind(this));
   }
 
-  private _createResources() {
+  private _createResources(): void {
     const { tagName } = this._meta;
     this._element = this._createDocumentElement(tagName);
   }
 
-  init() {
+  init(): void {
     this._createResources();
-    this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
+    this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
   }
 
-  private _componentDidMount() {
+  private _componentDidMount(): void {
     this.componentDidMount();
   }
 
   componentDidMount(): void {}
 
-  dispatchComponentDidMount() {
-    this.eventBus().emit(Block.EVENTS.FLOW_CDM);
+  dispatchComponentDidMount(): void {
+    this.eventBus.emit(Block.EVENTS.FLOW_CDM);
   }
 
-  private _componentDidUpdate(oldProps: Props) {
+  private _componentDidUpdate(oldProps: Props): void {
     const response = this.componentDidUpdate(oldProps, this.props);
     if (response) {
-      this.eventBus().emit(Block.EVENTS.FLOW_RENDER);
+      this.eventBus.emit(Block.EVENTS.FLOW_RENDER);
     }
   }
 
@@ -75,20 +68,17 @@ class Block {
     return true;
   }
 
-  setProps(nextProps: Props | undefined) {
-    if (!nextProps) {
-      return;
-    }
-
+  setProps(nextProps: Props): void {
+    if (!nextProps) return;
     Object.assign(this.props, nextProps);
-    this.eventBus().emit(Block.EVENTS.FLOW_CDU);
+    this.eventBus.emit(Block.EVENTS.FLOW_CDU);
   }
 
   get element(): HTMLElement | null {
     return this._element;
   }
 
-  private _render() {
+  private _render(): void {
     const block = this.render();
     if (this._element) {
       this._element.innerHTML = block;
@@ -104,17 +94,15 @@ class Block {
   }
 
   private _makePropsProxy(props: Props): Props {
-    const self = this;
-
     return new Proxy(props, {
-      set(target, prop: string, value) {
+      set(target, prop: string, value): boolean {
         if (prop in target) {
           target[prop] = value;
           return true;
         }
         throw new Error('Нет доступа');
       },
-      deleteProperty() {
+      deleteProperty(): boolean {
         throw new Error('Нет доступа');
       },
     });
@@ -124,14 +112,14 @@ class Block {
     return document.createElement(tagName);
   }
 
-  show() {
+  show(): void {
     const content = this.getContent();
     if (content) {
       content.style.display = 'block';
     }
   }
 
-  hide() {
+  hide(): void {
     const content = this.getContent();
     if (content) {
       content.style.display = 'none';
@@ -139,4 +127,4 @@ class Block {
   }
 }
 
-export default Block;
+export default Block;
