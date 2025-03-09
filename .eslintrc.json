@@ -17,6 +17,7 @@
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-empty-object-type":"unknown",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "jest/no-disabled-tests": "warn",
     "jest/no-identical-title": "error"
