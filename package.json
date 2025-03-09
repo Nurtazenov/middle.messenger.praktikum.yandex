@@ -16,9 +16,7 @@
   },
   "dependencies": {
     "vite-plugin-handlebars": "^1.5.0"
-  }
-
-,
+  },
   "keywords": [],
   "license": "ISC"
 }
