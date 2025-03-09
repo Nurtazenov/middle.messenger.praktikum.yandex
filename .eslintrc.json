@@ -23,6 +23,7 @@
     "jest/no-identical-title": "error",
     "@typescript-eslint/no-explicit-any":"off",
     "@typescript-eslint/no-this-alias":"off",
-    "no-irregular-whitespace":"off"
+    "no-irregular-whitespace":"off",
+    "no-useless-escape":"off"
   }
 }
