@@ -1,5 +1,5 @@
 .container {
-  background: white; // Используйте rgb вместо rgba, если не нужна прозрачность
+  background: white; 
   border: 1px solid black;
   padding: 20px;
   border-radius: 10px;
@@ -51,7 +51,7 @@
 button {
   display: flex;
   width: 250px;
-  background: linear-gradient(to bottom right, #4caf50, #45a847);
+  background: green;
   color: #fff;
   padding: 10px;
   margin: 15px 15px;
