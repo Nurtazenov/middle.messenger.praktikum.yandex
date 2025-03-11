@@ -4,7 +4,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:jest/recommended",
-
+    "google"
   ],
   "env": {
     "browser": true,
