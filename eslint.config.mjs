@@ -2,9 +2,10 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tsEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+
 export default [
   {
-    
+
     files: ["/*.{js,mjs,cjs,ts}"],
     ignores: [
       "eslint.config.js",
@@ -29,6 +30,7 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tsEslint,
+
     },
 
     rules: {
@@ -45,3 +47,6 @@ export default [
 },
 pluginJs.configs.recommended,
 ];
+
+
+
