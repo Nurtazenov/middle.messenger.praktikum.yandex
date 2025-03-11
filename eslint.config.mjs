@@ -1,41 +1,34 @@
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import jest from "eslint-plugin-jest";
 import globals from "globals";
+import pluginJs from "@eslint/js";
+import tsEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-export default [...compat.extends(
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended",
-    "airbnb",
-), {
-    plugins: {
-        "@typescript-eslint": typescriptEslint,
-        jest,
-    },
+export default [
+  {
+    
+    files: ["/*.{js,mjs,cjs,ts}"],
+    ignores: [
+      "eslint.config.js",
+      "stylelint.config.js",
+      "loader-css.js",
+      "mochaSetup.js",
+    ],
 
     languageOptions: {
-        globals: {
-            ...globals.browser,
-            ...globals.node,
-            ...jest.environments.globals.globals,
-        },
-
-        parser: tsParser,
-        ecmaVersion: 2020,
-        sourceType: "module",
+      globals: {
+        ...globals.browser,
+        describe: "readonly",
+        it: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        global: "readonly",
+      },
+      parser: tsParser,
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
+    plugins: {
+      "@typescript-eslint": tsEslint,
     },
 
     rules: {
@@ -49,4 +42,6 @@ export default [...compat.extends(
         "no-irregular-whitespace": "off",
         "no-useless-escape": "off",
     },
-}];
+},
+pluginJs.configs.recommended,
+];
