@@ -1,76 +1,68 @@
 .container {
-    background: rgba(255, 255, 255 );
-    border: 1px solid black;
-    padding: 20px;
-    border-radius: 10px;
-    width: 450px;
-    text-align: center;
-  
-    form {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-  
-      .form-group {
-        margin: 10px;
-        text-align: left;
-  
-        label {
-          font-weight: bold;
-          color: #333;
+  background: rgb(255, 255, 255); // Используйте rgb вместо rgba, если не нужна прозрачность
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 450px;
+  text-align: center;
 
-        };
-  
-        input {
-          width: 95%;
-          padding: 10px;
-          margin: 5px 0;
-          border: none;
-          border-radius: 5px;
-          background: white;
-          border: 1px solid black;
-          outline: none;
-          transition: box-shadow 0.5s ease-in-out;
-        };
-  
-        input:invalid {
-          border: 1px solid red;
-        };
-  
-      
-    
-  
-        a {
-          margin: 15px;
-        };
-  
-        #register-button {
-            width: 100px;
-          }
-    
-  
-        #avatar {
-          border: 1px solid #ccc;
-          padding: 5px;
-          border-radius: 5px;
-        };
-    };
-    };
-  };
-  button {
+  form {
     display: flex;
-    width: 250px;
-    background: linear-gradient(to bottom right, #4caf50, #45a847);
-    color: #fff;
-    padding: 10px;
-    margin: 15px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-  };
-  #register-button {
-    margin-left: 20%;
+    flex-direction: column;
     position: relative;
-    perspective-origin: center;
-    justify-content: center;
+
+    .form-group {
+      margin: 10px;
+      text-align: left;
+
+      label {
+        font-weight: bold;
+        color: #333;
+      }
+
+      input {
+        width: 95%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid black;
+        border-radius: 5px;
+        background: white;
+        outline: none;
+        transition: box-shadow 0.5s ease-in-out;
+      }
+
+      input:invalid {
+        border: 1px solid red;
+      }
+
+      a {
+        margin: 15px;
+      }
+
+      #avatar {
+        border: 1px solid #ccc;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
   }
+}
+
+button {
+  display: flex;
+  width: 250px;
+  background: linear-gradient(to bottom right, #4caf50, #45a847);
+  color: #fff;
+  padding: 10px;
+  margin: 15px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#register-button {
+  margin-left: 20%;
+  position: relative;
+  perspective-origin: center;
+  justify-content: center;
+}

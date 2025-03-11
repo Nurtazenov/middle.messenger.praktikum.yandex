@@ -3,7 +3,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "airbnb"
   ],
   "env": {
     "browser": true,
