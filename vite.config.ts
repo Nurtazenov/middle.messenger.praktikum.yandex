@@ -17,7 +17,7 @@ export default {
 
   plugins: [
     handlebars({
-      partialDirectory: path.resolve('__dirname', 'src/partials'),
+      partialDirectory : path.resolve('__dirname', 'src/partials'),
       context: {
         title: 'Hello Yandex Practicum!',
       },

@@ -23,7 +23,7 @@
     "@typescript-eslint/no-this-alias":"off",
     "no-irregular-whitespace":"off",
     "no-useless-escape":"off",
-    "eslint-plugin-react":"off"
-    
+    "eslint-plugin-react":"off",
+    "no-param-resign":"off"
   }
 }
