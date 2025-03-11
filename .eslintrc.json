@@ -1,4 +1,3 @@
-import typescriptEslint from '';
 {
   "parser": "@typescript-eslint/parser",
   "extends": [
