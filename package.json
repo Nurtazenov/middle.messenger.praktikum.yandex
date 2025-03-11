@@ -20,7 +20,8 @@
     "vite": "^5.0.8",
     "vite-plugin-handlebars": "^2.0.0",
     "@typescript-eslint/eslint-plugin":"~8.26.1",
-    "eslint-plugin-jest":"28.11.0"
+    "eslint-plugin-jest":"28.11.0",
+    "airbnb":"0.0.2"
   },
   "dependencies": {
     "handlebars": "^4.7.8",
