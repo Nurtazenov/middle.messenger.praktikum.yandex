@@ -19,8 +19,6 @@
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-empty-object-type":"off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "jest/no-disabled-tests": "warn",
-    "jest/no-identical-title": "error",
     "@typescript-eslint/no-explicit-any":"off",
     "@typescript-eslint/no-this-alias":"off",
     "no-irregular-whitespace":"off",
