@@ -1,4 +1,4 @@
-import typescriptEslint from "@typescript-eslint";
+import typescriptEslint from "typescript-eslint";
 import jest from "eslint-plugin-jest";
 import globals from "globals";
 import tsParser from "@typescript-eslint/parser";
