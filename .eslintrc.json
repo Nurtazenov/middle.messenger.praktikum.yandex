@@ -24,6 +24,6 @@
     "no-irregular-whitespace":"off",
     "no-useless-escape":"off",
     "eslint-plugin-react":"off",
-    "no-param-resign":"off"
+    "no-param-reassign":"off"
   }
 }
