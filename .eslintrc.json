@@ -22,6 +22,8 @@
     "@typescript-eslint/no-explicit-any":"off",
     "@typescript-eslint/no-this-alias":"off",
     "no-irregular-whitespace":"off",
-    "no-useless-escape":"off"
+    "no-useless-escape":"off",
+    "eslint-plugin-react":"off"
+    
   }
 }
