@@ -9,7 +9,11 @@
   "scripts": {
     "dev": "vite --port 3000",
     "start": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:styles":"stylelint '**/*.{css,scss}'",
+    "lintstyles:fix":"stylelint '**/*.{css,scss}' --fix"
   },
   "devDependencies": {
     "@eslint/js": "^8.2.0",
