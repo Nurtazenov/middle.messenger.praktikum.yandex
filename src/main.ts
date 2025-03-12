@@ -1,4 +1,4 @@
-import './main.scss';
+import './main.css';
 import { setProfile } from './profile/profile.ts';
 import { setRegister } from './Auth/register.ts';
 

@@ -1,4 +1,4 @@
-import './Profile.scss';
+import './Profile.css';
 
 export function setProfile(element: HTMLDivElement) {
   element.innerHTML = `

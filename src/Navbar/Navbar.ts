@@ -1,4 +1,4 @@
-import './Navbar.scss';
+import './Navbar.css';
 
 document.querySelector<HTMLDivElement>('#nav')!.innerHTML = `
     <div class = "main">

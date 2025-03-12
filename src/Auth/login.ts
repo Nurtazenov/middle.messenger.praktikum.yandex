@@ -1,4 +1,4 @@
-import './auth.scss';
+import './auth.css';
 export function setLogin(element: HTMLDivElement) {
   element.innerHTML = `
    <div class="container">
