@@ -5,8 +5,6 @@ import tsParser from "@typescript-eslint/parser";
 
 export default [
   {
-
-    files: ["/*.{js,mjs,cjs,ts}"],
     ignores: [
       "eslint.config.js",
       "stylelint.config.js",
