@@ -1,4 +1,4 @@
-import './auth.css';
+import './auth.scss';
 
 export function setRegister(element: HTMLDivElement) {
   element.innerHTML = `
