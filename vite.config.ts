@@ -11,10 +11,7 @@ export default {
   build: {
     outDir: path.resolve('__dirname', 'dist'),
     emptyOutDir: true,
-  }
-
-,
-
+  },
   plugins: [
     handlebars({
       partialDirectory : path.resolve('__dirname', 'src/partials'),

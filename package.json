@@ -11,7 +11,9 @@
     "start": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "lint:styles":"stylelint '**/*, {css,scss}'",
+    "lintstyles:fix":"stylelint '**/*, {css,scss}' --fix"
   },
   "devDependencies": {
     "@eslint/js": "^8.2.0",
@@ -27,7 +29,8 @@
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^5.0.8",
-    "vite-plugin-handlebars": "^2.0.0"
+    "vite-plugin-handlebars": "^2.0.0",
+    "sass": "^1.80.5"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^8.26.1",
@@ -36,8 +39,6 @@
     "netlify-cli": "^18.0.3",
     "path": "^0.12.7",
     "rollup": "^4.35.0",
-    "sass": "^1.85.1",
-    "scss": "^0.2.4",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-scss": "^6.11.1"
   }
