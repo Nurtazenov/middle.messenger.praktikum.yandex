@@ -11,9 +11,7 @@
     "start": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "lint:styles":"stylelint '**/*, {css,scss}'",
-    "lintstyles:fix":"stylelint '**/*, {css,scss}' --fix"
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@eslint/js": "^8.2.0",
