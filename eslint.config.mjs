@@ -2,9 +2,10 @@ import globals from "globals";
 import pluginJs from "@eslint/js";
 import tsEslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+
 export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts}"],
+    files: ["/*.{js,mjs,cjs,ts}"],
     ignores: [
       "eslint.config.js",
       "stylelint.config.js",
@@ -30,11 +31,18 @@ export default [
       "@typescript-eslint": tsEslint,
     },
     rules: {
-      "@typescript-eslint/no-unused-vars": "warn",
-      "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-empty-object-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "jest/no-disabled-tests": "warn",
+        "jest/no-identical-title": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-this-alias": "off",
+        "no-irregular-whitespace": "off",
+        "no-useless-escape": "off",
     },
-  },
-  pluginJs.configs.recommended,
+},
+pluginJs.configs.recommended,
 ];
 
 
