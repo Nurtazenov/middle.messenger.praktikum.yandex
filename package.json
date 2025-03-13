@@ -12,8 +12,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:styles":"stylelint '**/*.{css,scss}'",
-    "lintstyles:fix":"stylelint '**/*.{css,scss}' --fix"
+    "lint:styles": "stylelint '**/*.{css,scss}'",
+    "lintstyles:fix": "stylelint '**/*.{css,scss}' --fix"
   },
   "devDependencies": {
     "@eslint/js": "^8.2.0",
@@ -24,13 +24,12 @@
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "jest": "^29.7.0",
-    "sass-embedded": "^1.83.4",
+    "sass-embedded": "^1.85.1",
     "stylelint": "^16.15.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1",
     "vite": "^5.0.8",
-    "vite-plugin-handlebars": "^2.0.0",
-    "sass": "^1.80.5"
+    "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^8.26.1",
@@ -43,6 +42,3 @@
     "stylelint-scss": "^6.11.1"
   }
 }
-
-
-

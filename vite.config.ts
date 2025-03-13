@@ -1,7 +1,14 @@
 import handlebars from 'vite-plugin-handlebars';
 import path from 'path';
 export default {
-
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+        silenceDeprecations: ['legacy-js-api'],
+      }
+    }
+  },
   optimizeDeps: {
     include: ['handlebars'],
 
