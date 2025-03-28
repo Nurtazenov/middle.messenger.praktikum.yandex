@@ -24,7 +24,7 @@
     "eslint-plugin-jest": "^28.11.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "jest": "^29.7.0",
-    "sass-embedded": "^1.85.1",
+    "sass-embedded": "^1.86.0",
     "stylelint": "^16.15.0",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.26.1",
@@ -46,6 +46,3 @@
     "@rollup/rollup-linux-x64-gnu": "4.6.1"
   }
 }
-  
-
-
