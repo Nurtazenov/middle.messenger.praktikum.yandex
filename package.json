@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
+    "build": "vite build",
     "start": "vite build && node server.js",
     "preview": "vite preview",
     "lint": "eslint .",
