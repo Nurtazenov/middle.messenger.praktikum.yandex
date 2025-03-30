@@ -15,8 +15,11 @@ export default {
 
   },
   build: {
-    outDir: path.resolve('__dirname', 'dist'),
-    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
   },
   plugins: [
     handlebars({
