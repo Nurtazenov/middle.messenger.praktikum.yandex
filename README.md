@@ -13,7 +13,9 @@ SPA приложения созданным с использованием Vani
 
 В проекте использовался макет из; Figma: https://www.figma.com/design/jf5fffzggoxqeb4cmkwtie/chat_external_link?node-id=0-1&p=f&t=5xktgghqrpvriea0-0
 
-проет задеплоин на сайте netlify: https://middle-messenger-praktikum-yandex-an.netlify.app/
+проет задеплоин на сайте netlify: https://middle-messenger-praktikum-yandex-an.netlify.app/ ,
+если не работает сайт на netlify, то прошу перейти на эту ссылку
+GitHub Pages: https://nurtazenov.github.io/middle.messenger.praktikum.yandex/
 инструменты:
 stylelint
 editorconfig
