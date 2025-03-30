@@ -21,14 +21,14 @@ export default {
       },
     },
   },
-  plugins: [
-    handlebars({
-      partialDirectory : path.resolve('__dirname', 'src/partials'),
-      context: {
-        title: 'Hello Yandex Practicum!',
-      },
-    }),
-  ],
+  // plugins: [
+  //   handlebars({
+  //     partialDirectory : path.resolve('__dirname', 'src/partials'),
+  //     context: {
+  //       title: 'Hello Yandex Practicum!',
+  //     },
+  //   }),
+  // ],
   server: {
     port: 3000
   }
