@@ -1,5 +1,4 @@
 import './auth.scss';
-import { validates } from './validate';
 
 export const setRegister = (element: HTMLDivElement) => {
   element.innerHTML = `
@@ -62,7 +61,6 @@ export const setRegister = (element: HTMLDivElement) => {
     console.log(data);
   });
 
-  const input = document.getElementById('listInputs') as HTMLDivElement;
 }
 
 
