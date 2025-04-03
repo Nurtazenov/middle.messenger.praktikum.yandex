@@ -1,7 +1,10 @@
 document.querySelector<HTMLDivElement>('')!.innerHTML = `
   <div>
   <form action="" method="get">
-  <input name="search" id="search" placeholder="Искать здесь..." type="search">
+  <div class="form-group">
+                    <label for="message">Переписки</label>
+                <input type="search" id="message" placeholder="Искать здесь..." pattern = '^[A-ZА-Я]+[A-Za-zА-Яа-я\\-]*' name="message" >
+            </div>
   <button type="submit">Поиск</button>
 </form>
     <ol>
