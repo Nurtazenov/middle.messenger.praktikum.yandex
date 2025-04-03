@@ -1,4 +1,4 @@
-type IValidation  = {
+/* type IValidation  = {
     name:string,
     type:string,
     placeholder:string,
@@ -52,4 +52,7 @@ export const validates: IValidation = {
     },
 ]
 };
+
+ */
+
 
