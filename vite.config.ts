@@ -10,14 +10,16 @@ export default {
     },
     
   },
-  assetsInclude: ['**/*.hbs'],
   optimizeDeps: {
     include: ['handlebars'],
 
   },
   build: {
-    outDir: path.resolve('__dirname', 'dist'),
-    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+      },
+    },
   },
   plugins: [
     handlebars({
@@ -31,8 +33,3 @@ export default {
     port: 3000
   }
 };
-
-
-
-
-
