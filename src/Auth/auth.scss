@@ -19,12 +19,14 @@
         font-weight: bold;
         color: #333;
       }
+
       .error {
         color: red;
         font-size: 0.9em;
         margin-top: 4px;
         display: none; /* Скрываем ошибки по умолчанию */
       }
+      
       input {
         width: 95%;
         padding: 10px;
@@ -39,12 +41,15 @@
       input:invalid {
         border: 1px solid red;
       }
+
       input:valid {
         border: 1px solid green;
       }
+
       input:void{
         border: 1px solid black;
       }
+
       span{
         font-size: small;
       }
