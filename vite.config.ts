@@ -10,6 +10,7 @@ export default {
     },
     
   },
+  assetsInclude: ['**/*.hbs'],
   optimizeDeps: {
     include: ['handlebars'],
 

@@ -1,0 +1,13 @@
+
+<div>
+{{#each validates}}
+            <div class="form-group">
+                <label for="{{name}}">{{name}}</label>
+                <input type="{{type}}" id="{{name}}" pattern = "{{pattern}}" name="name" placeholder="{{placeholder}}" required>
+                <span class="error" id="inputError"></span>
+            </div>
+            {{/each}}
+</div>
+
+
+
