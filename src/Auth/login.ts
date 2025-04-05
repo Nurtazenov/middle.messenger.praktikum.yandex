@@ -18,6 +18,7 @@ export function setLogin(element: HTMLDivElement) {
         </form>
     </div>
 `;
+
   const form = document.getElementById('getLog') as HTMLFormElement;
   form.addEventListener('submit', (event:any) => {
     event.preventDefault();
