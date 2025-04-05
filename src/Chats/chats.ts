@@ -1,7 +1,7 @@
 document.querySelector<HTMLDivElement>('')!.innerHTML = `
   <div>
   <form action="" method="get">
-  <input name="search" id="search" placeholder="Искать здесь..." type="search">
+  <input name="message" id="message" placeholder="Искать здесь..." type="search">
   <button type="submit">Поиск</button>
 </form>
     <ol>
