@@ -1,15 +1,17 @@
 .container {
+  width: 80%;
+  margin: 0 auto;
   background: white; 
   border: 1px solid black;
   padding: 20px;
   border-radius: 10px;
   width: 450px;
-  text-align: center;
 
   form {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     position: relative;
+    text-align: center;
 
     .form-group {
       margin: 10px;
@@ -56,8 +58,7 @@
 button {
   display: flex;
   width: 250px;
-  background: green;
-  color: #fff;
+  color: #030303;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -69,6 +70,8 @@ button {
   position: relative;
   perspective-origin: center;
   justify-content: center;
+  background: green;
   margin-bottom: 5px;
 }
+
 

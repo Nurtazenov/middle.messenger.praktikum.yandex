@@ -1,0 +1,20 @@
+{{#Form class="dialog__input-bar" onSubmit=this.handleSubmit}}
+  {{{Button
+    buttonType="button"
+    buttonImage=this.paperclip
+    buttonClass="input-bar__pin-button"
+    imageAlt="file"
+  }}}
+  <textarea
+    name="message"
+    class="dialog__input-bar__input"
+    placeholder="Сообщение..."
+  ></textarea>
+  {{{Button
+    buttonType="submit"
+    buttonImage=this.arrowBtn
+    buttonClass="input-bar__send-button"
+    buttonImageClass="input-bar__send-icon"
+    imageAlt="send"
+  }}}
+{{/Form}}

@@ -1,0 +1,107 @@
+<main class="profile">
+  {{{Button
+    buttonType="button"
+    buttonImage=arrowBtn
+    buttonClass="profile__btn-back"
+    buttonImageClass="profile__btn-back-icon"
+    imageAlt="back"
+    onClick=this.onChangePage
+  }}}
+  <div class="profile__form-container">
+    {{{Button
+      buttonType="button"
+      buttonClass="profile__avatar-btn"
+      buttonImageClass="profile__avatar"
+      imageAlt="avatar"
+      buttonImage=this.avatar
+      onClick=this.onAvatarClick
+    }}}
+    {{#Form onSubmit=this.saveChanges class="profile__form"}}
+      <h3 class="profile__name">{{userData.display_name}}</h3>
+      <div class="profile__inputs-container">
+        {{#each inputs}}
+          {{{Input
+            inputName=this.props.inputName
+            inputLabel=this.props.inputLabel
+            inputType=this.props.inputType
+            inputMainClass=this.props.inputMainClass
+            inputClass=this.props.inputClass
+            labelClass=this.props.labelClass
+            inputValue=this.props.inputValue
+            isEditing=this.props.isEditing
+          }}}
+        {{/each}}
+      </div>
+      <div class="profile__btn-container">
+        {{#each buttons}}
+          {{{Button
+            buttonText=this.props.buttonText
+            buttonClass=this.props.buttonClass
+            buttonType=this.props.buttonType
+            onClick=this.props.onClick
+          }}}
+        {{/each}}
+      </div>
+    {{/Form}}
+  </div>
+
+  {{#Popup visibility=avatarChangeVisibility onClick=this.onAvatarClick}}
+    {{#Modal title="Загрузите файл"}}
+      {{#Form onSubmit=onAvatarChange class="profile__form"}}
+        <h1 class="form__title">Загрузите файл</h1>
+        <div>
+          {{{Input
+            inputName="avatar"
+            inputType="file"
+            labelName="avatar"
+            inputLabel="Выбрать файл на компьютере"
+            isEditing="true"
+          }}}
+          <p class="file">{{fileName}}</p>
+        </div>
+        {{{Button
+          buttonType="submit"
+          buttonText="Поменять"
+          buttonClass="button_primary"
+        }}}
+      {{/Form}}
+    {{/Modal}}
+  {{/Popup}}
+
+  {{#Popup visibility=passwordChangeVisibility onClick=this.onPasswordToggle}}
+    {{#Modal title="Загрузите файл"}}
+      {{#Form onSubmit=this.saveChanges class="profile__form"}}
+        <h1 class="form__title">Новый пароль</h1>
+        <div class="passwords__container">
+          {{{Input
+            inputName="oldPassword"
+            inputType="password"
+            labelName="oldPassword"
+            inputLabel="Старый пароль"
+            inputValue=""
+            inputMainClass="dynamic-input"
+            inputClass="dynamic-input__data"
+            labelClass="dynamic-input__placeholder"
+            isEditing="true"
+          }}}
+          {{{Input
+            inputName="newPassword"
+            inputType="password"
+            labelName="newPassword"
+            inputLabel="Новый пароль"
+            inputMainClass="dynamic-input"
+            inputClass="dynamic-input__data"
+            labelClass="dynamic-input__placeholder"
+            inputValue=""
+            isEditing="true"
+          }}}
+        </div>
+        {{{Button
+          buttonType="submit"
+          buttonText="Сохранить изменения"
+          buttonClass="button_primary"
+        }}}
+      {{/Form}}
+    {{/Modal}}
+  {{/Popup}}
+</main>

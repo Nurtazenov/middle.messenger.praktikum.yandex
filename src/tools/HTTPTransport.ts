@@ -1,79 +1,129 @@
-enum METHOD {
-  GET = 'GET',
-  POST = 'POST',
-  PUT = 'PUT',
-  PATCH = 'PATCH',
-  DELETE = 'DELETE'
+import ErrorModal from "../components/Modal/ErrorModal";
+
+interface Options {
+  headers?: Record<string, string>;
+  data?: any;
+  method: keyof typeof METHODS;
+  timeout?: number;
 }
 
-type Options = {
-  method: METHOD;
-  data?: any;
-  headers?: Record<string, string>;
-  timeout?: number;
+const METHODS = {
+  GET: "GET",
+  PUT: "PUT",
+  POST: "POST",
+  DELETE: "DELETE",
+} as const;
+
+type StringKeyObject = {
+  [key: string]: string | StringKeyObject;
 };
 
-function queryStringify(data: Record<string, string | number | boolean>): string {
-  if (typeof data !== 'object' || data === null) {
-    throw new Error('Data must be an object');
-  }
-
-  const keys = Object.keys(data);
-  return keys.reduce((result, key:any, index) => `${result}${encodeURIComponent(key)}=${encodeURIComponent(data[key])}${index < keys.length - 1 ? '&' : ''}`, '?');
+function queryStringify(obj: StringKeyObject): string {
+  const queryString = Object.entries(obj).map(([key, value]) => {
+    if (Array.isArray(value)) {
+      return `${encodeURIComponent(key)}=${encodeURIComponent(value.join(","))}`;
+    } else if (typeof value === "object" && value !== null) {
+      return `${encodeURIComponent(key)}=${encodeURIComponent("[object Object]")}`;
+    }
+    return `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`;
+  });
+  return queryString.join("&");
 }
 
 class HTTPTransport {
-  get(url: string, options: Options = { method: METHOD.GET }): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.GET });
+   static API_URL = "https://ya-praktikum.tech/api/v2";
+  protected endpoint: string;
+
+  constructor(endpoint: string) {
+    this.endpoint = `${HTTPTransport.API_URL}${endpoint}`;
   }
 
-  post(url: string, options: Options = { method: METHOD.POST }): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.POST });
-  }
+  request<Response>(
+    url: string,
+    options: Options,
+    timeout = 5000
+  ): Promise<Response> {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open(options.method, url);
 
-  put(url: string, options: Options = { method: METHOD.PUT }): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.PUT });
-  }
-
-  delete(url: string, options: Options = { method: METHOD.DELETE }): Promise<XMLHttpRequest> {
-    return this.request(url, { ...options, method: METHOD.DELETE });
-  }
-
-  private request(url: string, options: Options, timeout: number = 5000): Promise<XMLHttpRequest> {
-    const { headers = {}, method, data } = options;
-
-    return new Promise<XMLHttpRequest>((resolve, reject) => {
-      if (!method) {
-        reject(new Error('No method specified'));
-        return;
+      if (options.headers) {
+        Object.entries(options.headers).forEach(([header, value]) => {
+          xhr.setRequestHeader(header, value);
+        });
       }
 
-      const xhr = new XMLHttpRequest();
-      const isGet = method === METHOD.GET;
+      xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          resolve(xhr.response);
+        } else {
+          if (xhr.status === 400) {
+            reject(xhr.response); 
+          } else {
+            reject(new Error(`Request failed with status ${xhr.status}: ${xhr.statusText}`));
+          }
+        }
+      };
 
-      xhr.open(
-        method,
-        isGet && data
-          ? `${url}${queryStringify(data)}`
-          : url,
-      );
-
-      Object.keys(headers).forEach((key) => {
-        xhr.setRequestHeader(key, headers[key]);
-      });
-
-      xhr.onload = () => resolve(xhr);
-      xhr.onabort = () => reject(new Error('Request aborted'));
-      xhr.onerror = () => reject(new Error('Request failed'));
+      xhr.onerror = function () {
+        reject(new Error(`Request failed with status ${xhr.status}`));
+        ErrorModal(`Request failed with status ${xhr.status}`);
+      };
 
       xhr.timeout = timeout;
-      xhr.ontimeout = () => reject(new Error('Request timed out'));
+      xhr.withCredentials = true;
+      xhr.responseType = "json";
 
-      if (isGet || !data) {
+      xhr.ontimeout = function () {
+        reject(new Error("Request timed out"));
+      };
+
+      if (options.method === METHODS.GET) {
         xhr.send();
       } else {
-        xhr.send(data);
+        if (options.data instanceof FormData) {
+          xhr.send(options.data);
+        } else {
+          xhr.setRequestHeader("Content-Type", "application/json");
+          xhr.send(JSON.stringify(options.data));
+        }
       }
     });
   }
+
+  get<Response>(url: string, options?: Omit<Options, "method">): Promise<Response> {
+    let query = "";
+    if (options?.data) {
+      query += `?${queryStringify(options.data)}`;
+    }
+    return this.request<Response>(this.endpoint + `${url}${query}`, {
+      ...options,
+      method: METHODS.GET,
+    });
+  }
+
+  put<Response>(path: string = "/", data: unknown): Promise<Response> {
+    return this.request<Response>(this.endpoint + path, {
+      data,
+      method: METHODS.PUT,
+    });
+  }
+
+  post<Response>(path: string = "/", data: unknown): Promise<Response> {
+    return this.request<Response>(this.endpoint + path, {
+      data,
+      method: METHODS.POST,
+    });
+  }
+
+  delete<Response>(path: string = "/", data: unknown): Promise<Response> {
+    return this.request<Response>(this.endpoint + path, {
+      data,
+      method: METHODS.DELETE,
+    });
+  }
 }
+
+export { HTTPTransport };
+
+

@@ -1,0 +1,6 @@
+@import './RightSide/rightSide.scss';
+@import './LeftSide/leftSide.scss';
+.main-page {
+  display: flex;
+  flex-direction: row;
+}

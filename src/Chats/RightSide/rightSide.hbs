@@ -1,0 +1,22 @@
+<div class="dialog">
+  {{#if selectedChat}}
+    {{{Dialog
+      avatar=this.avatar
+      chatName=this.chatName
+      changePage=this.changePage
+    }}}
+    <div id="chat" class="dialog__messages-container">
+      {{#each this.messages}}
+        {{{Message
+          showDate=this.showDate
+          isCurrentUser=this.isMine
+          text=this.content
+          time=this.time
+        }}}
+      {{/each}}
+      {{{InputBar selectedChat=selectedChat}}}
+    </div>
+  {{else}}
+    <div class="dialog_not-selected">Выберите чат</div>
+  {{/if}}
+</div>

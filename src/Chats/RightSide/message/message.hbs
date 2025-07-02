@@ -1,0 +1,18 @@
+<div class="message-wrapper">
+  {{#if showDate}}
+    <div class="message__date">{{formatDate time}}</div>
+  {{/if}}
+  <div
+    class="message
+      {{#if isCurrentUser}}
+        message_mine
+      {{else}}
+        message_other
+      {{/if}}"
+  >
+    <p class="message__text">{{text}}</p>
+    <div class="message__time-container">
+      <p class="message__time">{{formatTime time}}</p>
+    </div>
+  </div>
+</div>

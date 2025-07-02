@@ -1,0 +1,64 @@
+.modal {
+  width: 340px;
+  min-height: 250px;
+  border-radius: 12px;
+  padding: 40px 30px;
+  background: var(--color-bg-default);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+
+  &.visible {
+    opacity: 1;
+    box-shadow: var(--box-shadow);
+    align-items: start;
+  }
+
+  &.hidden {
+    display: none;
+    opacity: 0;
+  }
+
+  &_min {
+    width: 210px;
+    min-height: 50px;
+    padding: 15px;
+    justify-content: flex-start;
+    gap: 15px;
+
+    &-top-right {
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      z-index: 10000;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    align-self: center;
+  }
+
+  &__error {
+    background-color: var(--bg-error);
+    box-shadow: var(--box-shadow);
+
+    &-message {
+      color: var(--color-err-message);
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      text-align: left;
+      color: var(--color-err-title);
+    }
+  }
+}
+
+
