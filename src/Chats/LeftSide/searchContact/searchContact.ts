@@ -1,8 +1,9 @@
 import chatController from "../../../controller/chat.controller";
 import Block from "../../../tools/Block"
 import { router, routs } from "../../../tools/Router";
-import template from './searchContact.hbs'
-import searchIcon from '../../../pictures/icons8-search.svg'
+import template from './searchContact.hbs';
+import searchIcon from '../../../pictures/icons8-search.svg';
+import './searchContact.scss'
 export default class SearchContact extends Block{
   constructor() {
     super({

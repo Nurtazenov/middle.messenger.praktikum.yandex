@@ -1,7 +1,8 @@
 import { ChatInfo } from "../../api/chat-api";
 import Block from "../../tools/Block";
 import { withStore } from "../../tools/Store";
-import template from './leftSide.hbs'
+import template from './leftSide.hbs';
+import './leftSide.scss';
 interface ILeftPanel{
   chats: ChatInfo[]
 }

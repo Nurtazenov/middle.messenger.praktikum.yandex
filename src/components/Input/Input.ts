@@ -1,7 +1,8 @@
 import { validateInput } from "../../Auth/validate";
 import Block from "../../tools/Block";
 import { activatePlaceholder, deactivatePlaceholder } from "../dom/activateInputFocus";
-import template from './input.hbs'
+import template from './input.hbs';
+import './input.scss';
 interface InputProps {
   inputName: string;
   inputLabel: string;

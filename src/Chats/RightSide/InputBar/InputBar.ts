@@ -2,7 +2,8 @@ import messagesController from "../../../controller/message.controller";
 import Block from "../../../tools/Block";
 import template from './InputBar.hbs';
 import arrowBtn from './../../../pictures/arrowBtn.png';
-import paperclip from './../../../pictures/paperclip-svgrepo-com.svg'
+import paperclip from './../../../pictures/paperclip-svgrepo-com.svg';
+import './InputBar.scss';
 function handleSendMessage(e: Event, block: Block) {
   e.preventDefault();
   const form = e.target as HTMLFormElement;

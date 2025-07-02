@@ -1,6 +1,6 @@
 import Block from "../../tools/Block";
 import templateButton from "./button.hbs";
-
+import './button.scss';
 interface PropsButton {
   buttonText: string;
   buttonClass: string;

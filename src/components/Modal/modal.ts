@@ -1,5 +1,6 @@
 import Block from "../../tools/Block";
 import modal from "./modal.hbs";
+import './modal.scss'
 interface IModalProps{
     visibility: string; 
     modalClassName?: string;

@@ -1,4 +1,4 @@
-import "./../auth.scss";
+import "./register.scss";
 import template from './register.hbs'
 import Block from '../../tools/Block';
 import { createButtons, createInputs } from '../../const/signup/signup';

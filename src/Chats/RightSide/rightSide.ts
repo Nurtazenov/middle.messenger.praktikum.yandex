@@ -4,6 +4,7 @@ import { withStore } from "../../tools/Store";
 import union from './../../pictures/avatrar.jpg'
 import { IMessage } from "./message/message.interface";
 import template from './rightSide.hbs'
+import './rightSide.scss'
 export  interface PropsMessages {
   messages: IMessage[];
   avatar: string;

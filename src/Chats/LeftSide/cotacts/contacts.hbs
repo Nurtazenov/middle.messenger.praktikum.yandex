@@ -1,16 +1,16 @@
-<div class="chat {{#if hasNewMessages}}chat_highlighted{{/if}}">
-  <div class="chat__info">      
-    <img class="chat__avatar" src="{{icon}}" alt="Аватар">
-    <div class="chat__details">
-      <h6 class="chat__title">{{chatName}}</h6>
-      <p class="chat__last-message">{{chatLastMessage}}</p>
+<div class=" {{#if hasNewMessages}}chat_highlighted{{/if}}">
+  <div class="">      
+    <img class="" src="{{icon}}" alt="Аватар">
+    <div class="s">
+      <h6 class="">{{chatName}}</h6>
+      <p class="">{{chatLastMessage}}</p>
     </div>
   </div>
-  <div class="chat__date-info">
-    <p class="chat__date">{{formatTime lastMessageDate}}</p>
+  <div class="">
+    <p class="">{{formatTime lastMessageDate}}</p>
     {{#if hasNewMessages}}
-      <div class="chat__unviewed">
-        <p class="chat__unviewed-count">{{newMessages}}</p>
+      <div class="">
+        <p class="">{{newMessages}}</p>
       </div>
     {{/if}}
   </div>

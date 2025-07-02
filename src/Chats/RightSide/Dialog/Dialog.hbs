@@ -1,7 +1,7 @@
-<div class="dialog__header">
-  <div class="header__title-container">
-    <img class="container__avatar" src={{avatar}} alt="img" />
-    <p class="container__title">{{chatName}}</p>
+<div class="">
+  <div class="">
+    <img class="" src={{avatar}} alt="img" />
+    <p class="">{{chatName}}</p>
   </div>
   {{{Button
     buttonType="button"
@@ -12,7 +12,7 @@
   }}}
   {{#Modal
     visibility=chatOptionsVisibility
-    modalClassName="modal_min modal_min-top-right"
+    modalClassName=""
   }}
 
     {{{Button
@@ -32,7 +32,7 @@
 
   {{#Popup visibility=addUserPopupVisibility onClick=this.onAddUserPopupClick}}
     {{#Modal}}
-      {{#Form onSubmit=handleAddUser class="profile__form"}}
+      {{#Form onSubmit=handleAddUser class=""}}
         <h1 class="form__title">Добавить пользователя</h1>
         <div style="position: relative; margin-bottom: 10px">{{{Input
             inputName="login"
@@ -44,11 +44,11 @@
             inputClass="dynamic-input__data"
             labelClass="dynamic-input__placeholder"
           }}}</div>
-          <div class="user-list">
+          <div class="">
            {{#each users}}
-          <div class="user-list__item">
-            <span class="user-list__item-display_name">{{this.display_name}}</span>
-            <span class="user-list__item-login">{{this.login}}</span>
+          <div class="">
+            <span class="">{{this.display_name}}</span>
+            <span class="">{{this.login}}</span>
           </div>
         {{/each}}</div>
         {{{Button
@@ -62,19 +62,19 @@
 
   {{#Popup visibility=deleteUserPopupVisibility onClick=this.onRemoveUserClick}}
     {{#Modal}}
-      <h1 class="form__title">Удалить пользователя</h1>
-      <div class="user-list">
+      <h1 class="">Удалить пользователя</h1>
+      <div class="">
         {{#each users}}
-          <div class="user-list__item">
-            <span class="user-list__item-display_name">{{this.display_name}}</span>
-            <span class="user-list__item-login">{{this.login}}</span>
+          <div class="">
+            <span class="">{{this.display_name}}</span>
+            <span class="">{{this.login}}</span>
         {{#if (isEqual this.id ../currentUserId)}}
-        <button class="button button_link" disabled>
+        <button class="" disabled>
           Это вы
         </button>
       {{else}}
         <button
-          class="button button_danger button_delete"
+          class=""
           data-user-id="{{this.id}}"
         >
           Удалить

@@ -4,6 +4,7 @@ import Block from "../tools/Block";
 import { withStore } from "../tools/Store";
 import template from "./chat.hbs"
 import { IMessage } from "./RightSide/message/message.interface";
+import './chat.scss';
 
 interface PropsMainPage {
   messages: IMessage[];

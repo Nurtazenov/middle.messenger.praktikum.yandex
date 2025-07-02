@@ -1,5 +1,6 @@
 import Block from "../../../tools/Block";
-import template from './message.hbs'
+import template from './message.hbs';
+import './message.scss';
 export interface IMessageItem {
   text: string;
   time: string;

@@ -1,5 +1,6 @@
 import Block from "../../tools/Block";
-import template from './popup.hbs'
+import template from './popup.hbs';
+import './popup.scss';
 interface PopupProps {
   onClick: () => void;
   visibility: string;

@@ -1,7 +1,7 @@
-<main class="signup-page">
-  {{#Form onSubmit=onSubmitForm class="signup-page__form"}}
-    <h1 class="form__title">Регистрация</h1>
-    <div class="form__inputs-container">
+<main class="">
+  {{#Form onSubmit=onSubmitForm class=""}}
+    <h1 class="">Регистрация</h1>
+    <div class="">
       {{#each inputs}}
         {{{Input
           inputName=this.props.inputName
@@ -14,7 +14,7 @@
         }}}
       {{/each}}
     </div>
-    <div class="form__buttons-container">
+    <div class="">
       {{#each buttons}}
         {{{Button
           buttonText=this.props.buttonText

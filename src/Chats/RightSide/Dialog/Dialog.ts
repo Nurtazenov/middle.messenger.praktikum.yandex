@@ -6,7 +6,8 @@ import { IUser } from "../../../api/user.interface";
 import userController from "../../../controller/user.controller";
 import ErrorModal from "../../../components/Modal/ErrorModal";
 import template from './Dialog.hbs';
-import ellipseIcon from './../../../pictures/ellipseIcon.svg'
+import ellipseIcon from './../../../pictures/ellipseIcon.svg';
+import './Dialog.scss'
 class Dialog extends Block{
 constructor() {
     super({
