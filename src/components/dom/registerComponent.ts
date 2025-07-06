@@ -2,7 +2,7 @@ import '../../help/index'
 import { HelperOptions } from "handlebars"
 import Block from "../../tools/Block";
 import Form from "../form/form";
-import Input from "../Input/input";
+import Input from '../Input/input';
 import Popup from "../popup/popup";
 import { LeftPanel } from "../../Chats/LeftSide/leftSide";
 import { ChatList } from "../../Chats/LeftSide/chatList/chatList";
