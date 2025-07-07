@@ -14,7 +14,6 @@ export default {
     vitePluginHandlebarsPrecompile(),
     svgr(),
   ],
-  assetsInclude: ['**/*.hbs'],
   css: {
     preprocessorOptions: {
       scss: {
