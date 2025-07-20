@@ -58,7 +58,7 @@ registerComponent("Input", Input);
 registerComponent("Popup", Popup);
 registerComponent("Modal", Modal);
 registerComponent("LeftPanel", LeftPanel);
-registerComponent("СhatList", ChatList);
+registerComponent("ChatList", ChatList);
 registerComponent("SearchContact", SearchContact);
 registerComponent("Contacts", Contacts);
 registerComponent("Dialog", Dialog);

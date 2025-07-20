@@ -1,7 +1,7 @@
 import { BaseAPI } from './base-api';
 import { IUser } from './user.interface';
 export interface ChatInfo {
-    id: number;
+  id: number ;
   title: string;
   avatar: string;
   unread_count: number;

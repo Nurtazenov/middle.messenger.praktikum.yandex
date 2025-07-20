@@ -13,7 +13,7 @@ export interface ISignUp{
 }
 
 export interface IUser{
-  id: string;
+  id: number;
   first_name: string;
   second_name: string;
   display_name: string;

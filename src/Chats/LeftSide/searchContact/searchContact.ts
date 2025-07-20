@@ -5,7 +5,7 @@ import template from './searchContact.hbs';
 import searchIcon from '../../../pictures/icons8-search.svg';
 import './searchContact.scss'
 export default class SearchContact extends Block{
-  constructor() {
+   constructor() {
     super({
       searchIcon: searchIcon,
       showChatPopup: "hidden",

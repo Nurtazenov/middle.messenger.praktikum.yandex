@@ -3,7 +3,7 @@ import Block from '../../tools/Block';
 import auth from '../../controller/auth.controller';
 import { createButtons, createInputs } from '../../const/login/login';
 import { initializeValidationListeners } from '../validate';
-import './login.scss'
+import '../auth.scss'
 const handleFormSubmit = (e: Event) => {
   e.preventDefault();
   const form = e.target as HTMLFormElement;

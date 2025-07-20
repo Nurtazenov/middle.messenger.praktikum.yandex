@@ -5,7 +5,7 @@ import ErrorModal from "../components/Modal/ErrorModal";
 import messagesController from "./message.controller";
 
 class ChatsController {
-   private readonly api: ChatsAPI;
+  private readonly api: ChatsAPI;
   private sockets: Map<number, WebSocket>;
 
   constructor() {
@@ -40,7 +40,7 @@ class ChatsController {
         console.log("chats", chats);
       }
     } catch (e) {
-      // showErrorModal(`${e}`);
+      ErrorModal(`${e}`);
     }
   }
 
@@ -55,10 +55,10 @@ class ChatsController {
       if (socket.readyState === WebSocket.OPEN) {
         socket.send(JSON.stringify({ type: "get old", content: "1" }));
       } else {
-        // console.error("WebSocket is not open, current state:", socket.readyState);
+       console.error("WebSocket is not open, current state:", socket.readyState);
       }
     } catch (e) {
-      // showErrorModal(`${e}`);
+      ErrorModal(`${e}`);
     }
   }
 

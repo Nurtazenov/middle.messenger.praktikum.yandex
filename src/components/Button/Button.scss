@@ -1,0 +1,80 @@
+.button {
+  border: none;
+  font-size: 11px;
+  line-height: 11px;
+  font-weight: 500;
+  transition: 0.3s;
+  text-decoration: none;
+
+  &_primary {
+    width: 100%;
+    min-width: 280px;
+    height: 37px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 13px;
+    color: white;
+    background-color: green;
+    padding: 12px;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &_link {
+    background-color: inherit;
+    color: gray;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &_text {
+    background-color: inherit;
+    color: black;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &_profile {
+    font-size: 13px;
+    line-height: 13px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &_danger {
+    background-color: inherit;
+    color: red;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
+  }
+
+  &_border {
+    width: 100%;
+    padding: 10px 0;
+    text-align: start;
+    border-bottom: 1px solid black;
+  }
+}
+
+.profile__avatar {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+

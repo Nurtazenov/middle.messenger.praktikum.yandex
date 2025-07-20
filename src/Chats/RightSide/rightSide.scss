@@ -1,0 +1,30 @@
+.dialog {
+  width: 85%;
+  height: 520px;
+  padding-top: 55px;
+  padding-bottom: 10px;
+  position: relative;
+
+  &__messages-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 200%;
+    gap: 10px;
+    padding: 0 20px 20px;
+    overflow-y: scroll;
+  }
+
+  &_not-selected {
+    display: flex;
+    place-self: center;
+    margin: 30% 50%;
+    width: 30%;
+  }
+  .input{
+    justify-content: end;
+  }
+  
+}
+
+

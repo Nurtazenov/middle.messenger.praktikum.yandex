@@ -18,7 +18,6 @@ class MessagesController {
 
       if (!userId || !token) {
         ErrorModal(`User ID or token is missing`);
-        // throw new Error("User ID or token is missing");
       }
 
       const wsTransport = new WSTransport(
@@ -31,8 +30,8 @@ class MessagesController {
       this.subscribe(wsTransport, id);
       this.fetchOldMessages(id);
     } catch (e) {
-      // console.error("Failed to connect to chat", e);
-      // showErrorModal(`${e}`);
+       console.error("Failed to connect to chat", e);
+       ErrorModal(`${e}`);
     }
   }
 
@@ -54,11 +53,6 @@ class MessagesController {
       }
 
       if (socket.readyState !== WebSocket.OPEN) {
-        // console.error(
-        //   "WebSocket is not open, current state:",
-        //   socket.readyState
-        // );
-        // showErrorModal(`Ошибка: WebSocket is not open, current state: ${socket.readyState}`);
         return;
       }
 
@@ -83,13 +77,9 @@ class MessagesController {
       if (socket.readyState === WebSocket.OPEN) {
         socket.send({ type: "get old", content: "0" });
       } else {
-        // console.error(
-        //   "WebSocket is not open, current state:",
-        //   socket.readyState
-        // );
+
       }
     } catch (e) {
-      // showErrorModal(`Ошибка:  ${e}`);
     }
   }
 
@@ -108,7 +98,6 @@ class MessagesController {
     try {
       Array.from(this.sockets.values()).forEach((socket) => socket.close());
     } catch (e) {
-      // showErrorModal(`Ошибка:  ${e}`);
     }
   }
 
@@ -163,8 +152,6 @@ class MessagesController {
       });
       store.set("chats", updatedChats);
     } catch (e) {
-      // console.error("Failed to update messages for chat", e);
-      // showErrorModal(`Ошибка:  ${e}`);
     }
   }
 
@@ -176,11 +163,9 @@ class MessagesController {
         if (token) {
           this.connect(id, token);
         } else {
-          // console.error("Token is undefined");
         }
       });
     } catch (e) {
-      // console.error("Failed to reconnect", e);
     }
   }
   
@@ -196,16 +181,13 @@ class MessagesController {
           } else if (parsedData) {
             this.onMessage(id, parsedData as IMessage);
           } else {
-            // console.error("Received invalid message format:", rawData);
           }
         } catch (e) {
-          // console.error("Failed to parse incoming message:", e);
         }
       });
 
       transport.on(WSTransportEvents.Close, () => this.onClose(id));
       transport.on(WSTransportEvents.Error, () => {
-        // console.error(`WebSocket error in chat ${id}`, error);
       });
     } catch (e) {
       // console.error(e);
@@ -215,5 +197,6 @@ class MessagesController {
 
 const messagesController = new MessagesController();
 
-  
-  export default messagesController;
+export default messagesController;
+
+

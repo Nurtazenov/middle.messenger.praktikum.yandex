@@ -16,7 +16,7 @@ public async updateUserInfo(form: HTMLFormElement) {
 
       const formData = new FormData(form);
       const data = {
-        id: formData.get("id") as string,
+        id: formData.get("id") as unknown as number,
         first_name: formData.get("first_name") as string,
         second_name: formData.get("second_name") as string,
         login: formData.get("login") as string,

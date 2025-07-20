@@ -1,9 +1,10 @@
-.signup-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: var(--bg-gradient);
+.page {
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 
   &__form {
     width: 340px;
@@ -13,17 +14,16 @@
     align-items: center;
     border-radius: 12px;
     box-shadow: 0 0 6px 0 rgb(0 0 0 / 14%);
-    background-color: var(--color-white);
   }
 }
 
 .form {
   &__title {
-    margin-right: auto;
+
     font-size: 25px;
     font-weight: 200;
     line-height: 20px;
-    color: var(--color-text-secondary);
+    justify-content: center;
   }
 
   &__buttons-container {
@@ -42,8 +42,7 @@
     margin-top: 20px;
   }
 }
-
-      input {
+    input {
         width: 95%;
         padding: 10px;
         margin: 5px 0;
@@ -55,6 +54,5 @@
       }
 
 #signup {
-  padding: 10px;
-  font-size: 16px;
+
 }

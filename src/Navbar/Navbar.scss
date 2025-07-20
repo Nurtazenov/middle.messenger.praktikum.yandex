@@ -2,23 +2,13 @@
     .main{
     display: flex;
     margin:10px auto;
-    text-align: center;
     flex-direction: row;
     bottom:100px;
-   
+    justify-content: center;
     .title{
-       justify-content: flex-start;
        color:green;
     }
-
-    .right{
-        justify-content: flex-end;
-    }
    }
-
-    .main > div {
-        text-align: center;
-    }
   }
   
 

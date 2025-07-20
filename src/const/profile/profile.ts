@@ -1,6 +1,6 @@
 import { IUser } from "../../api/user.interface";
-import Button from "../../components/Button/button";
-import Input from "../../components/Input/input";
+import Button from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
 import auth from "../../controller/auth.controller";
 
 export const createInputs = (userData: IUser, isEditing: boolean) => {

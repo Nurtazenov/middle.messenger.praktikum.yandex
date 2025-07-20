@@ -1,9 +1,10 @@
-{{#Form class="" onSubmit=this.handleSubmit}}
+{{#Form class="dialog__input-bar" onSubmit=this.handleSubmit}}
   {{{Button
     buttonType="button"
     buttonImage=this.paperclip
     buttonClass="input-bar__pin-button"
     imageAlt="file"
+    class="dialog__input-bar__input"
   }}}
   <textarea
     name="message"
@@ -18,3 +19,5 @@
     imageAlt="send"
   }}}
 {{/Form}}
+
+

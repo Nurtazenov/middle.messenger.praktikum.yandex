@@ -1,2 +1,107 @@
+input {
+  &:disabled {
+    background-color: transparent;
+  }
+}
+
+.dynamic-input {
+  width: 280px;
+  position: relative;
+
+  &__data {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid black;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 13px;
+    color: gray;
+    transition: 0.3s;
+
+    &_active {
+      top: 3px;
+      font-size: 9px;
+      font-weight: 200;
+      line-height: 9px;
+    }
+  }
+}
+
+.line-input {
+  width: 100%;
+  position: relative;
+
+  &__data {
+    width: 100%;
+    padding: 10px 0 10px 40px;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: right;
+    color: gray;
+    border: none;
+    border-bottom: 1px solid black;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid black;
+    }
+  }
+
+  &__placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+    color: gray;
+    transition: 0.3s;
+  }
+}
+
+.input__error {
+  color: red;
+  display: none;
+}
+
+.input__error_visible {
+  display: block;
+  position: absolute;
+  font-size: 9px;
+  z-index: 1000;
+  opacity: 0.6;
+}
+
+.dynamic-input.error {
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.dynamic-input.error .dynamic-input__placeholder {
+  color: red;
+}
+
+.line-input.error {
+  margin-bottom: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.line-input.error .dynamic-input__placeholder {
+  color: red;
+  top: 3px;
+}
 
 

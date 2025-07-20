@@ -10,7 +10,7 @@ export  interface PropsMessages {
   avatar: string;
 }
 class RightSide extends Block{
-constructor(props: PropsMessages) {
+  constructor(props: PropsMessages) {
     super({
       ...props,
       avatar: union,

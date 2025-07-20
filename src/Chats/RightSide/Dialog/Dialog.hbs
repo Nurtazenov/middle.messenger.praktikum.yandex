@@ -1,7 +1,7 @@
-<div class="">
-  <div class="">
-    <img class="" src={{avatar}} alt="img" />
-    <p class="">{{chatName}}</p>
+<div class="dialog__header">
+  <div class="header__title-container">
+    <img class="container__avatar" src={{this.avatar}} alt="img" />
+    <p class="container__title">{{chatName}}</p>
   </div>
   {{{Button
     buttonType="button"
@@ -12,8 +12,14 @@
   }}}
   {{#Modal
     visibility=chatOptionsVisibility
-    modalClassName=""
+    modalClassName="modal_min modal_min-top-right"
   }}
+    {{{Button
+      buttonType="button"
+      buttonText="Изменить аватар чата"
+      buttonClass="button_text"
+      onClick=this.onAvatarPopupClick
+    }}}
 
     {{{Button
       buttonType="button"
@@ -32,7 +38,7 @@
 
   {{#Popup visibility=addUserPopupVisibility onClick=this.onAddUserPopupClick}}
     {{#Modal}}
-      {{#Form onSubmit=handleAddUser class=""}}
+      {{#Form onSubmit=handleAddUser class="profile__form"}}
         <h1 class="form__title">Добавить пользователя</h1>
         <div style="position: relative; margin-bottom: 10px">{{{Input
             inputName="login"
@@ -44,11 +50,11 @@
             inputClass="dynamic-input__data"
             labelClass="dynamic-input__placeholder"
           }}}</div>
-          <div class="">
+          <div class="user-list">
            {{#each users}}
-          <div class="">
-            <span class="">{{this.display_name}}</span>
-            <span class="">{{this.login}}</span>
+          <div class="user-list__item">
+            <span class="user-list__item-display_name">{{this.display_name}}</span>
+            <span class="user-list__item-login">{{this.login}}</span>
           </div>
         {{/each}}</div>
         {{{Button
@@ -62,19 +68,19 @@
 
   {{#Popup visibility=deleteUserPopupVisibility onClick=this.onRemoveUserClick}}
     {{#Modal}}
-      <h1 class="">Удалить пользователя</h1>
-      <div class="">
+      <h1 class="form__title">Удалить пользователя</h1>
+      <div class="user-list">
         {{#each users}}
-          <div class="">
-            <span class="">{{this.display_name}}</span>
-            <span class="">{{this.login}}</span>
+          <div class="user-list__item">
+            <span class="user-list__item-display_name">{{this.display_name}}</span>
+            <span class="user-list__item-login">{{this.login}}</span>
         {{#if (isEqual this.id ../currentUserId)}}
-        <button class="" disabled>
+        <button class="button button_link" disabled>
           Это вы
         </button>
       {{else}}
         <button
-          class=""
+          class="button button_danger button_delete"
           data-user-id="{{this.id}}"
         >
           Удалить
@@ -85,4 +91,30 @@
       </div>
     {{/Modal}}
   {{/Popup}}
+
+  
+  {{#Popup visibility=avatarChangeVisibility onClick=this.onAvatarPopupClick}}
+    {{#Modal title="Загрузите файл"}}
+      {{#Form onSubmit=this.handleSetChatAvatar class="profile__form"}}
+        <h1 class="form__title">Загрузите файл</h1>
+        <div>
+          {{{Input
+            inputName="avatar"
+            inputType="file"
+            labelName="avatar"
+            inputLabel="Выбрать файл на компьютере"
+            isEditing="true"
+          }}}
+          <p class="file">{{fileName}}</p>
+        </div>
+        {{{Button
+          buttonType="submit"
+          buttonText="Поменять"
+          buttonClass="button_primary"
+        }}}
+      {{/Form}}
+    {{/Modal}}
+  {{/Popup}}
 </div>
+
+

@@ -53,7 +53,7 @@ const validationRules: ValidationRules = {
       "Пароль должен быть от 8 до 40 символов, содержать хотя бы одну заглавную букву и хотя бы одну цифру",
   },
   phone: {
-    regex: /\+?7\s?\(\d{3}\)\s?\d{3}\s?\d{2}\s?\d{2}/,
+    regex: /^[\s()+-]*([0-9][\s()+-]*){6,20}$/,
     errorMessage: "Номер телефона должен содержать от 10 до 15 цифр",
   },
   message: {
@@ -131,3 +131,5 @@ export const initializeValidationListeners = (form: HTMLFormElement): void => {
     });
   });
 };
+
+
