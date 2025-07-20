@@ -2,7 +2,7 @@ import '../../help/index'
 import { HelperOptions } from "handlebars"
 import Block from "../../tools/Block";
 import Form from "../form/form";
-import Input from '../Input/input';
+import Input from '../Input/Input';
 import Popup from "../popup/popup";
 import { LeftPanel } from "../../Chats/LeftSide/leftSide";
 import { ChatList } from "../../Chats/LeftSide/chatList/chatList";
@@ -12,7 +12,7 @@ import Dialog from "../../Chats/RightSide/Dialog/Dialog";
 import InputBar from "../../Chats/RightSide/InputBar/InputBar";
 import Message from "../../Chats/RightSide/message/message";
 import RightSide from "../../Chats/RightSide/rightSide";
-import Button from "../Button/button";
+import Button from "../Button/Button";
 import Handlebars from 'handlebars';
 import Modal from '../Modal/modal';
 export function registerComponent(name: string, Component: typeof Block) {
