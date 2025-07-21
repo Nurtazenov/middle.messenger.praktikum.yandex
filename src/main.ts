@@ -1,4 +1,3 @@
-import  setProfile  from './Profile/setProfile.ts';
 import { router, routs } from './tools/Router.ts';
 import setLogin  from './Auth/login/login.ts';
 import  setChat  from './Chats/chats.ts';
@@ -9,6 +8,8 @@ import './styles/main.scss'
 import { initializeInputFocusHandlers } from './components/dom/activateInputFocus.ts';
 import './components/dom/registerComponent.ts'
 import setErrorPage from './ErrorPage/error.ts';
+import setProfile from './Profile/setProfile.ts';
+
 window.addEventListener("DOMContentLoaded", async () => {
   router.use(routs.login, setLogin)
   .use(routs.signUp, setRegister)
