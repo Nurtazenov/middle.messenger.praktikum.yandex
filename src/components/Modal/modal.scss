@@ -8,6 +8,7 @@
   align-items: center;
   flex-direction: column;
   box-shadow: white;
+  color: white;
 
   &.visible {
     opacity: 1;
@@ -49,7 +50,7 @@
     color: white;
 
     &-message {
-      color: red;
+      color: white;
       font-size: 14px;
       text-align: left;
       margin-bottom: 10px;
