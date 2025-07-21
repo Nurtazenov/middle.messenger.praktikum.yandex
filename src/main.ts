@@ -8,7 +8,7 @@ import './styles/main.scss'
 import { initializeInputFocusHandlers } from './components/dom/activateInputFocus.ts';
 import './components/dom/registerComponent.ts'
 import setErrorPage from './ErrorPage/error.ts';
-import setProfile from './profile/profile.tmpl.ts'
+import setProfile from './profile/profile.tmpl.ts';
 
 window.addEventListener("DOMContentLoaded", async () => {
   router.use(routs.login, setLogin)
