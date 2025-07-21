@@ -28,7 +28,7 @@ export default {
       input: {
         main: path.resolve(__dirname, 'index.html'),
       },
-      external: ['/src/Navbar/navbar.ts']
+      external: ['/src/Navbar/navbar.ts',"/src/main.ts"]
     },
   },
   server: {
