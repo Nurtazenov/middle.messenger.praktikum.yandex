@@ -1,4 +1,4 @@
-import  setProfile  from './Profile/setProfile.tmpl.ts';
+import  setProfile  from './Profile/setProfile.ts';
 import { router, routs } from './tools/Router.ts';
 import setLogin  from './Auth/login/login.ts';
 import  setChat  from './Chats/chats.ts';
