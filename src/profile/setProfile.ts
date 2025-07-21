@@ -1,6 +1,6 @@
 import Block from '../tools/Block';
 import store, { withStore } from '../tools/Store';
-import './Profile.scss';
+import './profile.scss';
 import template from "./profile.hbs";
 import union from '../pictures/avatrar.jpg'
 import { IUser } from '../api/user.interface';
@@ -13,6 +13,7 @@ import auth from '../controller/auth.controller';
 import Button from '../components/Button/Button';
 import { validateForm } from '../Auth/validate';
 import { createButtons, createInputs } from '../const/profile/profile';
+
 const avatarPath =  `${api_url}/resources/`; 
 class setProfile extends Block {
   constructor() {
