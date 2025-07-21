@@ -11,7 +11,7 @@
     {{{Button
       buttonType="button"
       buttonClass="profile__avatar-btn"
-      buttonImageClass="profile__avatar"
+      buttonImageClass="profile-avatar"
       imageAlt="avatar"
       buttonImage=this.avatar
       onClick=this.onAvatarClick
@@ -72,7 +72,7 @@
     {{#Modal title="Загрузите файл"}}
       {{#Form onSubmit=this.saveChanges class="profile__form"}}
         <h1 class="form__title">Новый пароль</h1>
-        <div class="passwords__container">
+        <div class="passwords-container">
           {{{Input
             inputName="oldPassword"
             inputType="password"

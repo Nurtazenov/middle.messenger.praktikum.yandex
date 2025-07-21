@@ -19,7 +19,6 @@
 
 .form {
   &__title {
-
     font-size: 25px;
     font-weight: 200;
     line-height: 20px;
@@ -42,6 +41,7 @@
     margin-top: 20px;
   }
 }
+
     input {
         width: 95%;
         padding: 10px;
@@ -52,7 +52,3 @@
         outline: none;
         transition: box-shadow 0.5s ease-in-out;
       }
-
-#signup {
-
-}

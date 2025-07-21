@@ -13,7 +13,7 @@ class AuthController {
       const formIsValid = validateForm(form);
 
       if (!formIsValid) {
-        ErrorModal(`Данные не соответствуют`);
+        ErrorModal(`Login data is invalid`);
         return;
       }
 
@@ -33,15 +33,15 @@ class AuthController {
         })
         .catch((error) => {
           if (error.reason === "Пользователь уже в системе") {
-            router.go(routs.messenger);
+            router.go(routs.messenger); 
           } else if (error.reason) {
-            // ErrorModal(error.reason);
+            ErrorModal(error.reason);
           } else {
             ErrorModal("Неправильный логин или пароль");
           }
         });
     } catch (e) {
-      // ErrorModal(`${e}`);
+      ErrorModal(`${e}`);
     }
   }
 
@@ -50,7 +50,7 @@ class AuthController {
       const formIsValid = validateForm(form);
 
       if (!formIsValid) {
-        // ErrorModal(`Регистрация не действительна`);
+        ErrorModal(`Signup data is invalid`);
         return;
       }
 

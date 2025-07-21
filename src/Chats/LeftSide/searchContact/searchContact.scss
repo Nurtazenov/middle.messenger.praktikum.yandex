@@ -7,7 +7,7 @@
   padding-bottom: 15px;
   gap: 25px;
   border-right: 1px solid gray;
-  margin: -20px 5px -5px 5px;
+  margin: -20px 5px -5px;
 
 
   &__button {
@@ -21,7 +21,7 @@
   }
 
   &__button + button {
-    color: rgb(4, 97, 4);
+    color: green;
   }
 
   &__search-container {
