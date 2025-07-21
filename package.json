@@ -38,7 +38,7 @@
     "handlebars": "^4.7.8",
     "handlebars-helpers": "^0.10.0",
     "netlify": "^13.3.3",
-    "netlify-cli": "^18.1.0",
+    "netlify-cli": "^22.3.0",
     "path": "^0.12.7",
     "rollup": "^4.36.0",
     "stylelint-config-standard": "^37.0.0",
