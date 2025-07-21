@@ -21,7 +21,7 @@
     "outDir": "./dist"
   },
   
-  "include": ["src//", "src/types//", "custom.d.ts"],
+  "include": ["src/**/*.ts"],
 
   "exclude": [
     "node_modules",
