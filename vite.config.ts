@@ -19,9 +19,7 @@ export default {
       scss: {
         silenceDeprecations: ['legacy-js-api'],
       }
-      
     },
-    
   },
   build: {
     rollupOptions: {
@@ -32,7 +30,6 @@ export default {
     },
   },
   server: {
-    port: 3000,
-    open: true
+    port: 3000
   }
 };
