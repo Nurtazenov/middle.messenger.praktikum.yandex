@@ -1,0 +1,12 @@
+<div class="chat-list">
+  {{#each chats}}
+    {{{Contacts
+      chatId=id
+      avatar=avatar
+      chatName=title
+      chatLastMessage=last_message.content
+      lastMessageDate=last_message.time
+      newMessages=unread_count
+    }}}
+  {{/each}}
+</div>

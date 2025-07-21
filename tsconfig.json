@@ -1,28 +1,35 @@
 {
   "compilerOptions": {
-      "noImplicitAny": true,
-      "target": "es6",
-      "useDefineForClassFields": true,
-      "module": "commonjs",
-      "lib": ["es6", "DOM", "DOM.Iterable"],
-      "skipLibCheck": true,
-      "allowImportingTsExtensions": true,
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "noEmit": true,
-      "strict": true,
-      "noUnusedLocals": true,
-      "noUnusedParameters": true,
-      "noFallthroughCasesInSwitch": true,
-      "sourceMap":true,
-      "strictNullChecks":true,
-      "esModuleInterop":true,
-     "forceConsistentCasingInFileNames":true,
-     "outDir":"./dist"
+    "noImplicitAny": true,
+    "target": "es6",
+    "useDefineForClassFields": true,
+    "module": "commonjs",
+    "lib": ["es6", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist"
+  },
+  
+  "include": ["src/**/*.ts","src/**/*", "src/types/**/*", "custom.d.ts"],
 
-  }
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
+  ]
 
-,
-  "include": ["src", "src/main.ts"],
-  "exclude":["node_modules"]
 }
+
+

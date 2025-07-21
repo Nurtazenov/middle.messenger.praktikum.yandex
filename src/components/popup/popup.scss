@@ -1,0 +1,22 @@
+.popup__background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #00000050;
+
+  &.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    z-index: 1000;
+  }
+
+  &.hidden {
+    display: none;
+    opacity: 0;
+  }
+}
+
