@@ -20,7 +20,16 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist"
   },
-  "include": ["src//", "src/types//", "custom.d.ts"]
+  
+  "include": ["src//", "src/types//", "custom.d.ts"],
+
+  "exclude": [
+    "node_modules",
+    "./node_modules",
+    "./node_modules/*",
+    "./node_modules/@types/node/index.d.ts"
+  ]
+
 }
 
 
