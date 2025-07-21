@@ -1,7 +1,6 @@
 import resourcersApi from "../api/resourcers-api";
 import store from "../tools/Store";
 import userApi from "../api/user-api";
-import ErrorModal from "../components/Modal/ErrorModal";
 import { validateForm } from "../Auth/validate";
 import { IUser } from "../api/user.interface";
 

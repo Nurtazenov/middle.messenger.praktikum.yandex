@@ -1,5 +1,4 @@
 import { IMessage } from "../Chats/RightSide/message/message.interface";
-import ErrorModal from "../components/Modal/ErrorModal";
 import store from "../tools/Store";
 import WSTransport, { WSTransportEvents } from "../tools/WebSocket";
 import chatController from "./chat.controller";
