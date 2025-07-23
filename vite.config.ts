@@ -25,17 +25,6 @@ export default {
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
-<<<<<<< HEAD
-      },
-    },
-  },
-  plugins: [
-    handlebars({
-      partialDirectory : path.resolve('__dirname', 'src/partials'),
-      context: {
-        title: 'Hello Yandex Practicum!',
-=======
->>>>>>> sprint_3
       },
       external: ['/src/Navbar/navbar.ts',"/src/main.ts"]
     },
@@ -45,15 +34,4 @@ export default {
     open: true
   }
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> sprint_3
-=======
-
-
-
->>>>>>> sprint_3
