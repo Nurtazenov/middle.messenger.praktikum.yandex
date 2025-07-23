@@ -32,8 +32,8 @@ class AuthController {
           router.go(routs.messenger);
         })
         .catch((error) => {
-          if (error.reason === "User already in system") {
-            router.go(routs.messenger); // Редирект к чатам
+          if (error.reason === "Пользователь уже в системе") {
+            router.go(routs.messenger); 
           } else if (error.reason) {
             ErrorModal(error.reason);
           } else {

@@ -7,6 +7,9 @@
     "string-no-newline": true,
      "no-empty-source":null,
     "color-no-invalid-hex": true,
+    "selector-class-pattern":null,
+    "declaration-property-value-no-unknown":null,
+    
     "at-rule-no-unknown": [
       true,
       {

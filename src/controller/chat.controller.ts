@@ -18,7 +18,7 @@ class ChatsController {
       await this.api.create(title);
       this.fetchChats();
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -40,7 +40,7 @@ class ChatsController {
         console.log("chats", chats);
       }
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -49,16 +49,16 @@ class ChatsController {
       const socket = this.sockets.get(id);
 
       if (!socket) {
-        throw new Error(`Chat ${id} is not connected`);
+        throw new Error(`Чат ${id} не соединен`);
       }
 
       if (socket.readyState === WebSocket.OPEN) {
         socket.send(JSON.stringify({ type: "get old", content: "1" }));
       } else {
-       console.error("WebSocket is not open, current state:", socket.readyState);
+       console.error("WebSocket не открыт:", socket.readyState);
       }
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -66,7 +66,7 @@ class ChatsController {
     try {
       this.api.addUsers(id, [userId]);
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -84,7 +84,7 @@ class ChatsController {
       await this.api.delete(id);
       this.fetchChats();
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -93,7 +93,7 @@ class ChatsController {
       const token = await this.api.getToken(id);
       return token;
     } catch (e) {
-      // console.error('Failed to get token for chat', e);
+
       return undefined;
     }
   }
@@ -115,7 +115,7 @@ class ChatsController {
       const users = await this.api.getUsers(chatId);
       return users;
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
       return [];
     }
   }

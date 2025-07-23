@@ -19,15 +19,14 @@ export default {
       scss: {
         silenceDeprecations: ['legacy-js-api'],
       }
-      
     },
-    
   },
   build: {
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
       },
+      external: ['/src/Navbar/navbar.ts',"/src/main.ts"]
     },
   },
   server: {
@@ -35,3 +34,6 @@ export default {
     open: true
   }
 };
+
+
+

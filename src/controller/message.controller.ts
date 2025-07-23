@@ -1,5 +1,4 @@
 import { IMessage } from "../Chats/RightSide/message/message.interface";
-import ErrorModal from "../components/Modal/ErrorModal";
 import store from "../tools/Store";
 import WSTransport, { WSTransportEvents } from "../tools/WebSocket";
 import chatController from "./chat.controller";
@@ -17,7 +16,7 @@ class MessagesController {
       const userId = store.getState().user.id;
 
       if (!userId || !token) {
-        ErrorModal(`User ID or token is missing`);
+        // ErrorModal(`Отсутствует идентификатор пользователя или токен`);
       }
 
       const wsTransport = new WSTransport(
@@ -31,7 +30,7 @@ class MessagesController {
       this.fetchOldMessages(id);
     } catch (e) {
        console.error("Failed to connect to chat", e);
-       ErrorModal(`${e}`);
+      //  ErrorModal(`${e}`);
     }
   }
 
@@ -58,7 +57,7 @@ class MessagesController {
 
       socket.send({ type: "message", content: message });
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
