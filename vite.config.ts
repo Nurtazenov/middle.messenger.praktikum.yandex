@@ -41,12 +41,19 @@ export default {
     },
   },
   server: {
-    port: 3000
+    port: 3000,
+    open: true
   }
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
 
 =======
+>>>>>>> sprint_3
+=======
+
+
+
 >>>>>>> sprint_3
