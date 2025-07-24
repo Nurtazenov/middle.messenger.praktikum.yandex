@@ -4,34 +4,32 @@ import vitePluginHandlebarsPrecompile from './vite-plugin-handlebars-precompile'
 import eslintPlugin from "vite-plugin-eslint";
 import svgr from "vite-plugin-svgr";
 export default {
-  plugins: [
-    eslintPlugin({
-      include: ["/**/*.ts", "/**/*.js", "/**/*.hbs"],
-    }),
-    handlebars({
-      partialDirectory: resolve(__dirname, 'src/partials'),
-    }),
-    vitePluginHandlebarsPrecompile(),
-    svgr(),
-  ],
   css: {
     preprocessorOptions: {
       scss: {
         silenceDeprecations: ['legacy-js-api'],
       }
+      
     },
+    
+  },
+  optimizeDeps: {
+    include: ['handlebars'],
+
   },
   build: {
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
       },
-
     },
   },
+  plugins: [
+    handlebars({
+    }),
+  ],
   server: {
-    port: 3000,
-    open: true
+    port: 3000
   }
 };
 
