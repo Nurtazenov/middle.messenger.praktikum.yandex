@@ -21,12 +21,17 @@ export default {
       }
     },
   },
-  build: {
+   build: {
+    outDir: "./dist",
+    sourcemap: true,
     rollupOptions: {
       input: {
-        main: path.resolve(__dirname, 'index.html'),
+        main: resolve(__dirname, "index.html"),
       },
-      external: ['/src/Navbar/navbar.ts',"/src/main.ts"]
+      output: {
+        dir: "./dist",
+        format: "es",
+      },
     },
   },
   server: {
