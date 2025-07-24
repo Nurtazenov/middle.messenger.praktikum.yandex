@@ -21,7 +21,7 @@ export default {
       }
     },
   },
-   build: {
+ build: {
     outDir: "./dist",
     sourcemap: true,
     rollupOptions: {
@@ -32,6 +32,7 @@ export default {
         dir: "./dist",
         format: "es",
       },
+      external: ['/src/Navbar/navbar.ts',"/src/main.ts"]
     },
   },
   server: {
