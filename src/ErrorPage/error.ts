@@ -13,7 +13,7 @@ export default class setErrorPage extends Block {
       ...props,
       onButtonClick: (e: Event) => {
         e.preventDefault();
-        router.go(routs.messenger)
+        router.go(routs.signUp)
       },
     });
   }
