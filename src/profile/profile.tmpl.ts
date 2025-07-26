@@ -1,6 +1,6 @@
 import Block from '../tools/Block';
 import store, { withStore } from '../tools/Store';
-import './Profile.scss'
+import './profile.scss';
 import template from "./profile.hbs";
 import union from '../pictures/avatrar.jpg'
 import { IUser } from '../api/user.interface';
@@ -154,7 +154,7 @@ class setProfile extends Block {
         });
       }
     } catch (error) {
-      // console.error("Ошибка данных пользователя:", error);
+      // console.error("Error fetching user data:", error);
     }
   }
 
