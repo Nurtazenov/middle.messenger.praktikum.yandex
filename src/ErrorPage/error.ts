@@ -1,6 +1,6 @@
 import Block from "../tools/Block";
 import { router, routs } from "../tools/Router";
-import template from './Error.hbs'
+import template from './error.hbs'
 import './error.scss'
 interface ErrorPageProps {
   errorCode: string;
