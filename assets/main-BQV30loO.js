@@ -224,7 +224,7 @@ Expecting `+I.join(", ")+", got '"+(this.terminals_[C]||C)+"'":X="Parse error on
   `+((s=(m(n,"Button")||e&&m(e,"Button")||i).call(o,{name:"Button",hash:{onClick:e!=null?m(e,"onButtonClick"):e,buttonLink:"/sign-up",buttonClass:"button_text",buttonText:"Назад к чатам"},data:a,loc:{start:{line:4,column:2},end:{line:9,column:5}}}))!=null?s:"")+`
 </main>
 
-`},useData:!0});class Si extends A{constructor(e){super({...e,onButtonClick:n=>{n.preventDefault(),F.go(B.messenger)}})}render(){return this.compile(Pi,this.props)}}const wi=L.template({1:function(t,e,n,l,a){var s,r=e??(t.nullContext||{}),o=t.lookupProperty||function(i,u){if(Object.prototype.hasOwnProperty.call(i,u))return i[u]};return'      <h3 class="profile__name">'+t.escapeExpression(t.lambda((s=e!=null?o(e,"userData"):e)!=null?o(s,"display_name"):s,e))+`</h3>
+`},useData:!0});class Si extends A{constructor(e){super({...e,onButtonClick:n=>{n.preventDefault(),F.go(B.signUp)}})}render(){return this.compile(Pi,this.props)}}const wi=L.template({1:function(t,e,n,l,a){var s,r=e??(t.nullContext||{}),o=t.lookupProperty||function(i,u){if(Object.prototype.hasOwnProperty.call(i,u))return i[u]};return'      <h3 class="profile__name">'+t.escapeExpression(t.lambda((s=e!=null?o(e,"userData"):e)!=null?o(s,"display_name"):s,e))+`</h3>
       <div class="profile__inputs-container">
 `+((s=o(n,"each").call(r,e!=null?o(e,"inputs"):e,{name:"each",hash:{},fn:t.program(2,a,0),inverse:t.noop,data:a,loc:{start:{line:22,column:8},end:{line:33,column:17}}}))!=null?s:"")+`      </div>
       <div class="profile__btn-container">
