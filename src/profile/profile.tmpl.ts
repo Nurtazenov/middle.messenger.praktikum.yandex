@@ -154,7 +154,7 @@ class setProfile extends Block {
         });
       }
     } catch (error) {
-      // console.error("Error fetching user data:", error);
+      // console.error("Ошибка данных пользователя:", error);
     }
   }
 
