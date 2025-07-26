@@ -6,10 +6,6 @@ import svgr from "vite-plugin-svgr";
 import { defineConfig } from 'vite';
 export default defineConfig ({
   plugins: [
-
-    handlebars({
-      partialDirectory: resolve(__dirname, 'src/partials'),
-    }),
     vitePluginHandlebarsPrecompile(),
     svgr(),
   ],
