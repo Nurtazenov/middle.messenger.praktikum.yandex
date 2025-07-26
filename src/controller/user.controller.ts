@@ -1,7 +1,6 @@
 import resourcersApi from "../api/resourcers-api";
 import store from "../tools/Store";
 import userApi from "../api/user-api";
-import ErrorModal from "../components/Modal/ErrorModal";
 import { validateForm } from "../Auth/validate";
 import { IUser } from "../api/user.interface";
 
@@ -30,7 +29,7 @@ public async updateUserInfo(form: HTMLFormElement) {
       const user = await userApi.update(data);
       store.set("user", user);
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -45,7 +44,7 @@ public async updateUserInfo(form: HTMLFormElement) {
         }
       }
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -54,7 +53,7 @@ public async updateUserInfo(form: HTMLFormElement) {
       const avatarPath = await resourcersApi.getAvatar(id);
       store.set("user.avatar", avatarPath);
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -74,7 +73,7 @@ public async updateUserInfo(form: HTMLFormElement) {
 
       await userApi.changePassword(data);
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
     }
   }
 
@@ -83,7 +82,7 @@ public async updateUserInfo(form: HTMLFormElement) {
       const res = await userApi.searchUsers(login);
       return res;
     } catch (e) {
-      ErrorModal(`${e}`);
+      // ErrorModal(`${e}`);
       throw e;
     }
   }

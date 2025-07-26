@@ -15,7 +15,9 @@ export default [
         afterEach: "readonly",
         global: "readonly",
       },
-      parser: tsParser,
+      
+      parser:tsParser,
+
       parserOptions: {
         project: "./tsconfig.json",
       },
@@ -37,4 +39,3 @@ export default [
 },
 pluginJs.configs.recommended,
 ];
-

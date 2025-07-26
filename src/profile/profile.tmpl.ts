@@ -13,6 +13,7 @@ import auth from '../controller/auth.controller';
 import Button from '../components/Button/Button';
 import { validateForm } from '../Auth/validate';
 import { createButtons, createInputs } from '../const/profile/profile';
+
 const avatarPath =  `${api_url}/resources/`; 
 class setProfile extends Block {
   constructor() {

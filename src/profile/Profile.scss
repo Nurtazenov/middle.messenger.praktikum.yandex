@@ -6,7 +6,8 @@
 
   &__btn-back {
     width: 150px;
-    height: 100vh;
+    margin-top: -300px;
+    height: 1800px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +15,7 @@
     transition: 0.3s;
 
     &:hover {
-      background-color: rgb(206, 201, 201);
+      background-color: gainsboro;
     }
   }
 
@@ -78,7 +79,7 @@
   }
 }
 
-.passwords__container {
+.passwords-container {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -86,4 +87,5 @@
   margin-right: auto;
   margin-bottom: 10px;
 }
+
 
