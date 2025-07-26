@@ -25,14 +25,6 @@ export default defineConfig({
       },
     },
   },
-
-  css: {
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "src/styles/variables.scss";`,
-      },
-    },
-  },
   server: {
     port: 3000,
     open: true,
