@@ -6,9 +6,6 @@ import svgr from "vite-plugin-svgr";
 import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [
-    handlebars({
-      partialDirectory: resolve(__dirname, "src/partials"),
-    }),
     vitePluginHandlebarsPrecompile(),
     svgr(),
   ],
@@ -16,9 +13,6 @@ export default defineConfig({
     outDir: "./dist",
     sourcemap: true,
     rollupOptions: {
-      input: {
-        main: resolve(__dirname, "index.html"),
-      },
       output: {
         dir: "./dist",
         format: "es",
