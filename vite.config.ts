@@ -23,6 +23,7 @@ export default defineConfig({
         dir: "./dist",
         format: "es",
       },
+      external: ['/src/Navbar/navbar.ts',"/src/main.ts"]
     },
   },
   server: {
