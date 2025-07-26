@@ -5,6 +5,7 @@ import { createButtons, createInputs } from '../../const/login/login';
 import { initializeValidationListeners } from '../validate';
 import { withStore } from "../../tools/Store";
 import { IUser } from "../../api/user.interface";
+import './login.scss';
 
 const handleFormSubmit = (e: Event) => {
   e.preventDefault();
