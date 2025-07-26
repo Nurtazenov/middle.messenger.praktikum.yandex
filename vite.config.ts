@@ -17,7 +17,7 @@ export default defineConfig({
         dir: "./dist",
         format: "es",
       },
-      external: ['/src/Navbar/navbar.ts',"/src/main.ts"]
+      external: ["/src/main.ts"]
     },
   },
   server: {
