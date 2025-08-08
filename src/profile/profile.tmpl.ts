@@ -64,7 +64,6 @@ class setProfile extends Block {
     ) as HTMLInputElement;
     if (avatarInput && avatarInput.files?.length) {
       const avatarFile = avatarInput.files[0];
-
       const MAX_FILE_SIZE = 5 * 1024 * 1024;
       if (avatarFile.size > MAX_FILE_SIZE) {
           ErrorModal(`Размер файла слишком велик. Максимальный размер 5 МБ.`)
@@ -73,6 +72,7 @@ class setProfile extends Block {
 
       await userController.updateUserAvatar(form);
       this.setProps({ avatarChangeVisibility: "hidden" });
+      location.reload();
     } else {
           ErrorModal(`Файл для аватара не выбран`)
     }
@@ -83,7 +83,6 @@ class setProfile extends Block {
       avatarChangeVisibility:
         this.props.avatarChangeVisibility === "visible" ? "hidden" : "visible",
     });
-
   };
 
   handleChangePasswordClick = () => {
@@ -154,7 +153,7 @@ class setProfile extends Block {
         });
       }
     } catch (error) {
-      // console.error("Error fetching user data:", error);
+      // console.error("Ошибка:", error);
     }
   }
 
