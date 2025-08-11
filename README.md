@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Описание проекта:
 Web-messenger
 
@@ -22,10 +21,6 @@ eslint
 vite
 typescript
 
-
-
-=======
->>>>>>> origin/main
 
 
 
