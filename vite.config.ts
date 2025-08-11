@@ -1,5 +1,4 @@
-import handlebars from 'vite-plugin-handlebars';
-import path, {resolve} from 'path';
+import path from 'path';
 import vitePluginHandlebarsPrecompile from './vite-plugin-handlebars-precompile';
 import eslintPlugin from "vite-plugin-eslint";
 import svgr from "vite-plugin-svgr";
@@ -21,7 +20,6 @@ export default defineConfig ({
       input: {
         main: path.resolve(__dirname, 'index.html'),
       },
-      external: ["./src/main.ts"]
     },
   },
   server: {
@@ -30,6 +28,5 @@ export default defineConfig ({
   }
 }
 );
-
 
 
