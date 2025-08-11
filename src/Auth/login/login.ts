@@ -3,13 +3,16 @@ import Block from '../../tools/Block';
 import auth from '../../controller/auth.controller';
 import { createButtons, createInputs } from '../../const/login/login';
 import { initializeValidationListeners } from '../validate';
-import '../auth.scss'
+import { withStore } from "../../tools/Store";
+import { IUser } from "../../api/user.interface";
+import './login.scss';
+
 const handleFormSubmit = (e: Event) => {
   e.preventDefault();
   const form = e.target as HTMLFormElement;
   auth.login(form);
 };
-export default class setLogin extends Block {
+export class setLogin extends Block {
 constructor() {
     super({
       buttons: createButtons(),
@@ -26,5 +29,10 @@ constructor() {
   render() {
     return this.compile(template, this.props);
   }
-
 }
+const mapStateToProps = (state: { user: IUser }) => {
+  return {
+    currentUserData: state.user || {},
+  };
+};
+export default withStore(mapStateToProps)(setLogin)
