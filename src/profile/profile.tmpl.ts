@@ -1,6 +1,6 @@
 import Block from '../tools/Block';
 import store, { withStore } from '../tools/Store';
-import './profile.scss';
+import './Profile.scss';
 import template from "./profile.hbs";
 import union from '../pictures/avatrar.jpg'
 import { IUser } from '../api/user.interface';
