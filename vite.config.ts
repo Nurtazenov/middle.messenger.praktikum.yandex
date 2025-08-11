@@ -20,8 +20,6 @@ export default defineConfig ({
       input: {
         main: path.resolve(__dirname, 'index.html'),
       },
-
-      external: ["./src/main.ts"]
     },
   },
   server: {
