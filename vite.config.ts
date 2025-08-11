@@ -21,7 +21,7 @@ export default defineConfig ({
       input: {
         main: path.resolve(__dirname, 'index.html'),
       },
-      external: ["./src/Navbar/Navbar.ts","./src/main.ts"]
+      external: ["./src/main.ts"]
     },
   },
   server: {
