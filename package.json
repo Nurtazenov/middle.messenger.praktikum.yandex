@@ -18,6 +18,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^8.2.0",
+    "@types/chai-spies": "^1.0.6",
+    "@types/sinon": "^17.0.4",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -33,7 +35,11 @@
     "vite-plugin-handlebars": "^2.0.0"
   },
   "dependencies": {
+    "@types/chai": "^5.2.2",
+    "@types/mocha": "^10.0.10",
     "@typescript-eslint/parser": "^8.26.1",
+    "chai": "^6.0.1",
+    "chai-spies": "^1.1.0",
     "express": "^4.21.2",
     "handlebars": "^4.7.8",
     "handlebars-helpers": "^0.10.0",
@@ -41,6 +47,7 @@
     "netlify-cli": "^22.3.0",
     "path": "^0.12.7",
     "rollup": "^4.36.0",
+    "sinon": "^21.0.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-scss": "^6.11.1",
     "vite-plugin-eslint": "^1.8.1",

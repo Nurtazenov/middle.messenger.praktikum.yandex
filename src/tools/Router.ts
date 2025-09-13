@@ -3,6 +3,24 @@ import Block from "./Block";
 import Route from "./Route";
 import store from "./Store";
 export class Router {
+  static back() {
+      throw new Error("Method not implemented.");
+  }
+  static forward() {
+      throw new Error("Method not implemented.");
+  }
+  static getRoute(error: string) {
+      throw new Error("Method not implemented.");
+  }
+  static go(arg0: string) {
+      throw new Error("Method not implemented.");
+  }
+  static use(arg0: string, BlockMock: typeof Block) {
+      throw new Error("Method not implemented.");
+  }
+  static reset() {
+      throw new Error("Method not implemented.");
+  }
   private static __instance?: Router;
   private routes: Route[] = [];
   private currentRoute: Route | null = null;

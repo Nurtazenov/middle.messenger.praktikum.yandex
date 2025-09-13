@@ -1,13 +1,13 @@
 import ErrorModal from "../components/Modal/ErrorModal";
 
-interface Options {
+export interface Options {
   headers?: Record<string, string>;
   data?: any;
   method: keyof typeof METHODS;
   timeout?: number;
 }
 
-const METHODS = {
+export const METHODS = {
   GET: "GET",
   PUT: "PUT",
   POST: "POST",
