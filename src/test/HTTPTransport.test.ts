@@ -5,10 +5,10 @@ jest.mock("../components/Modal/ErrorModal", () => jest.fn());
 
 describe("HTTPTransport", () => {
   let xhrMock: any;
-  let requests: any[] = [];
+  let _requests: any[] = [];
 
   beforeEach(() => {
-    requests = [];
+    _requests = [];
     xhrMock = {
       open: jest.fn(),
       send: jest.fn(),
