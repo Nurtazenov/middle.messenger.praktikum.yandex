@@ -9,13 +9,13 @@ export class Router {
   static forward() {
       throw new Error("Method not implemented.");
   }
-  static getRoute(error: string) {
+  static getRoute(_error: string) {
       throw new Error("Method not implemented.");
   }
-  static go(arg_0: string) {
+  static go(_arg0: string) {
       throw new Error("Method not implemented.");
   }
-  static use(arg_0: string, Block_Mock: typeof Block) {
+  static use(_arg0: string, _BlockMock: typeof Block) {
       throw new Error("Method not implemented.");
   }
   static reset() {
