@@ -6,6 +6,9 @@ import tsParser from "@typescript-eslint/parser";
 export default [
   {
     files: ["**/*.{js,mjs,cjs,ts}"],
+     ignores: [
+      "mochaSetup.js",
+    ],
     languageOptions: {
       globals: {
         ...globals.browser,

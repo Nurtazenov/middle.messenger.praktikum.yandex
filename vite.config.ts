@@ -1,6 +1,5 @@
 import path from 'path';
 import vitePluginHandlebarsPrecompile from './vite-plugin-handlebars-precompile';
-import eslintPlugin from "vite-plugin-eslint";
 import svgr from "vite-plugin-svgr";
 import { defineConfig } from 'vite';
 export default defineConfig ({

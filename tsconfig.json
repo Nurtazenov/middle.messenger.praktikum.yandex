@@ -3,11 +3,10 @@
     "noImplicitAny": true,
     "target": "es6",
     "useDefineForClassFields": true,
-    "module": "commonjs",
+    "module": "esnext",
     "lib": ["es6", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "strict": true,
@@ -18,7 +17,7 @@
     "strictNullChecks": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
   },
   
   "include": ["src/**/*.ts","src/**/*", "src/types/**/*", "custom.d.ts"],
