@@ -48,7 +48,7 @@ describe("HTTPTransport", () => {
     xhrMock.statusText = "Internal Server Error";
     xhrMock.onload();
 
-    await expect(promise).rejects.toThrow("Ошибка запроса со статусом 500: Внутренняя ошибка сервера");
+    await expect(promise).rejects.toThrow("Request failed with status 500: Internal Server Error");
   });
 
   it("следует отклонить promise и вызвать ErrorModal при ошибке XHR", async () => {
@@ -58,8 +58,8 @@ describe("HTTPTransport", () => {
     xhrMock.status = 500;
     xhrMock.onerror();
 
-    await expect(promise).rejects.toThrow("Запрос не выполнен со статусом 500");
-    expect(ErrorModal).toHaveBeenCalledWith("Запрос не выполнен со статусом 500");
+    await expect(promise).rejects.toThrow("The request failed with the 500 status");
+    expect(ErrorModal).toHaveBeenCalledWith("The request failed with the 500 status");
   });
 
   it("следует отклонить обещание по истечении времени ожидания", async () => {
@@ -68,7 +68,7 @@ describe("HTTPTransport", () => {
 
     xhrMock.ontimeout();
 
-    await expect(promise).rejects.toThrow("Время ожидания запроса истекло");
+    await expect(promise).rejects.toThrow("The request waiting time has expired");
   });
 
   it("следует отправить POST-запрос с данными JSON", async () => {
