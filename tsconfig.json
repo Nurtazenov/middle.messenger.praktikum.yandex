@@ -17,18 +17,16 @@
     "strictNullChecks": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist",
+    "outDir": "./dist"
   },
-  
   "include": ["src/**/*.ts","src/**/*", "src/types/**/*", "custom.d.ts"],
-
   "exclude": [
     "node_modules",
     "./node_modules",
     "./node_modules/*",
     "./node_modules/@types/node/index.d.ts"
   ]
-
 }
+
 
 
