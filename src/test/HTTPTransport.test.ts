@@ -5,10 +5,8 @@ jest.mock("../components/Modal/ErrorModal", () => jest.fn());
 
 describe("HTTPTransport", () => {
   let xhrMock: any;
-  let _requests: any[] = [];
 
   beforeEach(() => {
-    _requests = [];
     xhrMock = {
       open: jest.fn(),
       send: jest.fn(),
@@ -32,18 +30,17 @@ describe("HTTPTransport", () => {
     jest.clearAllMocks();
   });
 
-  it("should resolve promise on successful GET request", async () => {
+  it("следует разрешить promise при успешном запросе GET", async () => {
     const transport = new HTTPTransport("/test");
     const promise = transport.get("/endpoint");
 
-    // Симулируем успешный ответ
     xhrMock.onload();
 
     await expect(promise).resolves.toEqual({ ok: true });
     expect(xhrMock.open).toHaveBeenCalledWith(METHODS.GET, "https://ya-praktikum.tech/api/v2/test/endpoint");
   });
 
-  it("should reject promise on failed request with status != 200", async () => {
+  it("следует отклонить promise при неудачном запросе со статусом != 200", async () => {
     const transport = new HTTPTransport("/test");
     const promise = transport.get("/fail");
 
@@ -51,30 +48,30 @@ describe("HTTPTransport", () => {
     xhrMock.statusText = "Internal Server Error";
     xhrMock.onload();
 
-    await expect(promise).rejects.toThrow("Request failed with status 500: Internal Server Error");
+    await expect(promise).rejects.toThrow("Ошибка запроса со статусом 500: Внутренняя ошибка сервера");
   });
 
-  it("should reject promise and call ErrorModal on XHR error", async () => {
+  it("следует отклонить promise и вызвать ErrorModal при ошибке XHR", async () => {
     const transport = new HTTPTransport("/test");
     const promise = transport.get("/error");
 
     xhrMock.status = 500;
     xhrMock.onerror();
 
-    await expect(promise).rejects.toThrow("Request failed with status 500");
-    expect(ErrorModal).toHaveBeenCalledWith("Request failed with status 500");
+    await expect(promise).rejects.toThrow("Запрос не выполнен со статусом 500");
+    expect(ErrorModal).toHaveBeenCalledWith("Запрос не выполнен со статусом 500");
   });
 
-  it("should reject promise on timeout", async () => {
+  it("следует отклонить обещание по истечении времени ожидания", async () => {
     const transport = new HTTPTransport("/test");
     const promise = transport.get("/timeout");
 
     xhrMock.ontimeout();
 
-    await expect(promise).rejects.toThrow("Request timed out");
+    await expect(promise).rejects.toThrow("Время ожидания запроса истекло");
   });
 
-  it("should send POST request with JSON data", async () => {
+  it("следует отправить POST-запрос с данными JSON", async () => {
     const transport = new HTTPTransport("/test");
     const data = { name: "John" };
     transport.post("/", data);
@@ -83,7 +80,7 @@ describe("HTTPTransport", () => {
     expect(xhrMock.send).toHaveBeenCalledWith(JSON.stringify(data));
   });
 
-  it("should send PUT request with JSON data", async () => {
+  it("следует отправить PUT запрос с JSON данными", async () => {
     const transport = new HTTPTransport("/test");
     const data = { id: 1 };
     transport.put("/", data);
@@ -92,7 +89,7 @@ describe("HTTPTransport", () => {
     expect(xhrMock.send).toHaveBeenCalledWith(JSON.stringify(data));
   });
 
-  it("should send DELETE request with JSON data", async () => {
+  it("следует отправить DELETE запрос с JSON данными", async () => {
     const transport = new HTTPTransport("/test");
     const data = { id: 1 };
     transport.delete("/", data);

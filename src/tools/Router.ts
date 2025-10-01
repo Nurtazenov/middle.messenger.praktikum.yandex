@@ -12,10 +12,10 @@ export class Router {
   static getRoute(error: string) {
       throw new Error("Method not implemented.");
   }
-  static go(arg0: string) {
+  static go(arg_0: string) {
       throw new Error("Method not implemented.");
   }
-  static use(arg0: string, BlockMock: typeof Block) {
+  static use(arg_0: string, Block_Mock: typeof Block) {
       throw new Error("Method not implemented.");
   }
   static reset() {

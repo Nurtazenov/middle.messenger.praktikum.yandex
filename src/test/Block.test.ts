@@ -11,11 +11,11 @@ describe("Block", () => {
     block = new Block({ testProp: "initial" });
   });
 
-  it("should create a Block instance with an id", () => {
+  it("следует создать экземпляр блока с идентификатором", () => {
     expect(block.id).toBe("mocked-uuid");
   });
 
-  it("should store props and get them correctly", () => {
+  it("следует правильно хранить реквизит и доставать его", () => {
     expect(block.getProps("testProp")).toBe("initial");
 
     block.setProps({ testProp: "updated", newProp: 123 });
@@ -23,7 +23,7 @@ describe("Block", () => {
     expect(block.getProps("newProp")).toBe(123);
   });
 
-  it("should emit FLOW_CDU on props change via proxy", () => {
+  it("должен выдавать FLOW_CDU при изменении реквизита через прокси", () => {
     const spy = jest.spyOn(block.eventBus(), "emit");
     block.setProps({ foo: "bar" });
     expect(spy).toHaveBeenCalledWith(
@@ -33,13 +33,13 @@ describe("Block", () => {
     );
   });
 
-  it("should handle dispatchComponentDidMount", () => {
+  it("должен обрабатывать dispatchComponentDidMount", () => {
     const spy = jest.spyOn(block.eventBus(), "emit");
     block.dispatchComponentDidMount();
     expect(spy).toHaveBeenCalledWith(Block.EVENTS.FLOW_CDM);
   });
 
-  it("should show and hide element", () => {
+  it("следует показывать и скрывать элемент", () => {
     const mockElement = document.createElement("div");
     // @ts-ignore
     block["_element"] = mockElement;
@@ -51,18 +51,18 @@ describe("Block", () => {
     expect(mockElement.style.display).toBe("none");
   });
 
-  it("should return null for element before render", () => {
+  it("должен возвращать значение null для элемента перед рендерингом", () => {
     expect(block.element).toBe(null);
     expect(block.getContent()).toBe(null);
   });
 
-  it("should compile template with context", () => {
+  it("следует скомпилировать шаблон с учетом контекста", () => {
     const template = jest.fn((ctx) => `<div>${ctx.foo}</div>`);
     const content = block.compile(template, { foo: "bar" });
     expect(content.firstElementChild?.outerHTML).toBe("<div>bar</div>");
   });
 
-  it("should register and emit INIT event on creation", () => {
+  it("должен регистрироваться и выдавать событие INIT при создании", () => {
   const emitMock = jest.fn();
   const onMock = jest.fn();
 
@@ -76,7 +76,7 @@ describe("Block", () => {
   expect(emitMock).toHaveBeenCalledWith(Block.EVENTS.INIT);
 });
 
-  it("should protect props from delete", () => {
+  it("должен защищать реквизит от удаления", () => {
     expect(() => {
       // @ts-ignore
       delete block.props.testProp;

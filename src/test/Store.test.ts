@@ -2,13 +2,11 @@ import store, { StoreEvents, withStore } from "../tools/Store";
 import Block from "../tools/Block";
 import isEqual from "../tools/isEqual";
 
-// мок isEqual (иначе он обычная функция)
 jest.mock("../tools/isEqual", () => ({
   __esModule: true,
   default: jest.fn(),
 }));
 
-// мок uuid если нужно (Block может его дергать)
 jest.mock("uuid", () => ({
   v4: jest.fn(() => "mocked-uuid"),
 }));
@@ -24,7 +22,7 @@ beforeEach(() => {
 });
 describe("Store", () => {
   beforeEach(() => {
-    (store as any).state = {}; // очищаем стейт
+    (store as any).state = {}; 
     jest.clearAllMocks();
   });
 
@@ -55,7 +53,7 @@ describe("Store", () => {
 describe("withStore HOC", () => {
   beforeEach(() => {
     (store as any).state = {};
-    (isEqual as jest.Mock).mockReturnValue(false); // по умолчанию — состояния разные
+    (isEqual as jest.Mock).mockReturnValue(false);
   });
 
 it("должен пробрасывать состояние в компонент при создании", () => {
@@ -76,13 +74,13 @@ it("должен пробрасывать состояние в компонен
 
     jest.spyOn(component, "setProps");
 
-    store.set("value", 42); // триггерим обновление
+    store.set("value", 42); 
 
     expect(component.setProps).toHaveBeenCalledWith({ value: 42 });
   });
 
   it("не должен обновлять props если состояние не изменилось", () => {
-    (isEqual as jest.Mock).mockReturnValue(true); // состояния одинаковые
+    (isEqual as jest.Mock).mockReturnValue(true); 
     const mapStateToProps = jest.fn(() => ({ test: "same" }));
     const Wrapped = withStore(mapStateToProps)(TestBlock);
     const component = new Wrapped({});

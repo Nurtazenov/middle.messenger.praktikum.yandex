@@ -3,7 +3,6 @@ import { Router, routs } from "../tools/Router";
 import store from "../tools/Store";
 import Route from "../tools/Route";
 
-// Мокаем store
 jest.mock("../tools/Store", () => ({
   __esModule: true,
   default: {
@@ -11,7 +10,6 @@ jest.mock("../tools/Store", () => ({
   },
 }));
 
-// Мокаем Route
 jest.mock("../tools/Route", () => {
   return jest.fn().mockImplementation((pathname, block, rootQuery) => {
     return {
@@ -29,7 +27,6 @@ describe("Router", () => {
   let router: Router;
 
   beforeEach(() => {
-    // каждый тест — новый инстанс
     router = new Router("#app");
     router.reset();
 
@@ -39,7 +36,6 @@ describe("Router", () => {
   it("должен регистрировать роут через use()", () => {
     router.use(routs.login, {} as any);
 
-    // Route вызван с правильными аргументами
     expect(Route).toHaveBeenCalledWith(routs.login, {}, "#app");
   });
 
