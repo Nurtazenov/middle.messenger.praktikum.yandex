@@ -1,7 +1,7 @@
 /** @type {import('jest').Config} */
 const config = {
-  preset: "ts-jest/presets/default-esm",   // ESM поддержка для ts-jest
-  testEnvironment: "jsdom",                // нужен пакет jest-environment-jsdom
+  preset: "ts-jest/presets/default-esm", 
+  testEnvironment: "jsdom",       
   extensionsToTreatAsEsm: [".ts"],
 
   transformIgnorePatterns: [

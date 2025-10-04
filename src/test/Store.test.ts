@@ -1,6 +1,7 @@
-import store, { StoreEvents, withStore } from "../tools/Store";
-import Block from "../tools/Block";
-import isEqual from "../tools/isEqual";
+/* eslint-disable no-undef */
+import store, { StoreEvents, withStore } from "../tools/Store.ts";
+import Block from "../tools/Block.ts";
+import isEqual from "../tools/isEqual.ts";
 
 jest.mock("../tools/isEqual", () => ({
   __esModule: true,

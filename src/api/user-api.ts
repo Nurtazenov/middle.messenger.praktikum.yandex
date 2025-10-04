@@ -1,3 +1,4 @@
+/* eslint-disable no-empty */
 import ErrorModal from "../components/Modal/ErrorModal";
 import { BaseAPI } from "./base-api";
 import { IChangePassword, IUser } from "./user.interface";

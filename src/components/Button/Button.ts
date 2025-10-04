@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Block from "../../tools/Block";
 import templateButton from "./button.hbs";
 import './Button.scss';

@@ -1,4 +1,11 @@
-eslint.config.js
-.stylelintrc.json
+dist/
+__dirname/
+
+vite.config.ts
+jest.config.cjs
+eslint.config.mjs
 .loaderrc.mjs
-mochaSetup.js
+server.js
+vite-plugin-handlebars-precompile.ts
+
+

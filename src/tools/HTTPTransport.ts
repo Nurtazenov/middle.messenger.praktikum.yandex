@@ -1,4 +1,4 @@
-import ErrorModal from "../components/Modal/ErrorModal";
+import ErrorModal from "../components/Modal/ErrorModal.ts";
 
 export interface Options {
   headers?: Record<string, string>;

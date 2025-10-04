@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 
-import { Router, routs } from "../tools/Router";
-import store from "../tools/Store";
-import Route from "../tools/Route";
+import { Router, routs } from "../tools/Router.ts";
+import store from "../tools/Store.ts";
+import Route from "../tools/Route.ts";
 
 jest.mock("../tools/Store", () => ({
   __esModule: true,

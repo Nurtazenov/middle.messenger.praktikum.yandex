@@ -1,5 +1,6 @@
-import { HTTPTransport, METHODS } from "../tools/HTTPTransport";
-import ErrorModal from "../components/Modal/ErrorModal";
+/* eslint-disable no-undef */
+import { HTTPTransport, METHODS } from "../tools/HTTPTransport.ts";
+import ErrorModal from "../components/Modal/ErrorModal.ts";
 
 jest.mock("../components/Modal/ErrorModal", () => jest.fn());
 

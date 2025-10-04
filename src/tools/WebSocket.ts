@@ -1,4 +1,6 @@
-import {EventBus} from "./EventBus";
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+import {EventBus} from "./EventBus.ts";
 
 export enum WSTransportEvents {
     Connected = "connected",

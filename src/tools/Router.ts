@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 
-import Block from "./Block";
-import Route from "./Route";
-import store from "./Store";
+import Block from "./Block.ts";
+import Route from "./Route.ts";
+import store from "./Store.ts";
 export class Router {
   static back() {
       throw new Error("Method not implemented.");

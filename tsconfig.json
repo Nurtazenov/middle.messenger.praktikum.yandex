@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "target": "es6",
     "useDefineForClassFields": true,
-    "module": "esnext",
+    "module": "NodeNext",
+    "moduleResolution": "node16", 
     "lib": ["es6", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
@@ -21,14 +21,27 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist"
   },
-  "include": ["src/**/*.ts","src/**/*", "src/types/**/*", "custom.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*",
+    "src/types/**/*",
+    "custom.d.ts",
+    "./vite.config.ts",
+    "./server.js",
+    "./jest.config.cjs",
+    "./eslint.config.mjs",
+    "./.loaderrc.mjs"
+  ],
   "exclude": [
     "node_modules",
     "./node_modules",
     "./node_modules/*",
-    "./node_modules/@types/node/index.d.ts"
+    "./node_modules/@types/node/index.d.ts",
+    "dist",
+    "__dirname",
+    "**/dist/**/*",
+    "**/__dirname/dist/**/*"
   ]
 }
-
 
 

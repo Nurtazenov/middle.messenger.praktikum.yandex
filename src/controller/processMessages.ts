@@ -1,4 +1,4 @@
-import { IMessage } from "../Chats/RightSide/message/message.interface";
+import { IMessage } from "../Chats/RightSide/message/message.interface.ts";
 
 export default function processMessages(
     messages: Array<IMessage>

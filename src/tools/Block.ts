@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { v4 as uuid4 } from "uuid";
 import EventBus from './EventBus.ts';
 

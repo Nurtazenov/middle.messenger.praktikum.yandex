@@ -1,8 +1,9 @@
-import resourcersApi from "../api/resourcers-api";
-import store from "../tools/Store";
-import userApi from "../api/user-api";
-import { validateForm } from "../Auth/validate";
-import { IUser } from "../api/user.interface";
+/* eslint-disable no-useless-catch */
+import resourcersApi from "../api/resourcers-api.ts";
+import store from "../tools/Store.ts";
+import userApi from "../api/user-api.ts";
+import { validateForm } from "../Auth/validate.ts";
+import { IUser } from "../api/user.interface.ts";
 
 class UsersController {
 public async updateUserInfo(form: HTMLFormElement) {

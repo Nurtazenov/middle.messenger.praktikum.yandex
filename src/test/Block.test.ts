@@ -1,4 +1,5 @@
-import Block from "../tools/Block";
+/* eslint-disable no-undef */
+import Block from "../tools/Block.ts";
 
 jest.mock("uuid", () => ({
   v4: jest.fn(() => "mocked-uuid"),

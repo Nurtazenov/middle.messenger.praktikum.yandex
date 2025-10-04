@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 import path from 'path';
-import vitePluginHandlebarsPrecompile from './vite-plugin-handlebars-precompile';
+import vitePluginHandlebarsPrecompile from './vite-plugin-handlebars-precompile.js';
 import svgr from "vite-plugin-svgr";
 import { defineConfig } from 'vite';
 export default defineConfig ({

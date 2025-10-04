@@ -1,11 +1,10 @@
-import authApi from "../api/auth-api"; 
-;
-import { router, routs } from "../tools/Router";
-import ErrorModal from "../components/Modal/ErrorModal";
-import chatController from "./chat.controller";
-import store from "../tools/Store";
-import { IUser } from "../api/user.interface";
-import { validateForm } from "../Auth/validate";
+import authApi from "../api/auth-api.ts"; 
+import { router, routs } from "../tools/Router.ts";
+import ErrorModal from "../components/Modal/ErrorModal.ts";
+import chatController from "./chat.controller.ts";
+import store from "../tools/Store.ts";
+import { IUser } from "../api/user.interface.ts";
+import { validateForm } from "../Auth/validate.ts";
 
 class AuthController {
     public async login(form: HTMLFormElement) {
