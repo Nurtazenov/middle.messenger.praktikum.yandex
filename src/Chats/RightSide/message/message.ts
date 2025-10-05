@@ -1,4 +1,4 @@
-import Block from "../../../tools/Block";
+import Block from "../../../tools/Block.ts";
 import template from './message.hbs';
 import './message.scss';
 export interface IMessageItem {

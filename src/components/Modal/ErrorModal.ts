@@ -1,4 +1,4 @@
-import Modal from "./modal";
+import Modal from "./modal.ts";
 
 function ErrorModal(err:string){
  const errorModal = new Modal({

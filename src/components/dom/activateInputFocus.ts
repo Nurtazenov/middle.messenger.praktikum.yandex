@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 function activatePlaceholder(input: HTMLElement): void {
   const placeholder = input.querySelector(
     ".dynamic-input__placeholder"

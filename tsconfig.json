@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
+        "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": ["jest"],
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
-    "target": "es6",
+    "noImplicitAny": false,
+    "target": "ES6",
     "useDefineForClassFields": true,
-    "module": "NodeNext",
-    "moduleResolution": "node16", 
-    "lib": ["es6", "DOM", "DOM.Iterable"],
+    "module": "ESNext",  
+    "lib": ["DOM", "ESNext"],
     "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
@@ -28,9 +31,10 @@
     "custom.d.ts",
     "./vite.config.ts",
     "./server.js",
-    "./jest.config.cjs",
+    "jest.config.cjs",
     "./eslint.config.mjs",
-    "./.loaderrc.mjs"
+    "./.loaderrc.mjs",
+    "src/test/**/*.ts"
   ],
   "exclude": [
     "node_modules",

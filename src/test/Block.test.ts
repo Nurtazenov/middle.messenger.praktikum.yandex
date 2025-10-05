@@ -6,7 +6,7 @@ jest.mock("uuid", () => ({
 }));
 
 describe("Block", () => {
-  let block: Block;
+  let block;
 
   beforeEach(() => {
     block = new Block({ testProp: "initial" });
@@ -72,7 +72,7 @@ describe("Block", () => {
     on = onMock;
   }
 
-  new Block({}, new MockEventBus() as any);
+  new Block({}, new MockEventBus());
 
   expect(emitMock).toHaveBeenCalledWith(Block.EVENTS.INIT);
 });

@@ -1,6 +1,6 @@
-import { validateInput } from "../../Auth/validate";
-import Block from "../../tools/Block";
-import { activatePlaceholder, deactivatePlaceholder } from "../dom/activateInputFocus";
+import { validateInput } from "../../Auth/validate.ts";
+import Block from "../../tools/Block.ts";
+import { activatePlaceholder, deactivatePlaceholder } from "../dom/activateInputFocus.ts";
 import template from './input.hbs';
 import './Input.scss';
 interface InputProps {

@@ -1,5 +1,5 @@
 
-import Block from '../../tools/Block';
+import Block from '../../tools/Block.ts';
 import template from './form.hbs';
 
 interface FormProps {

@@ -1,8 +1,9 @@
 /* eslint-disable no-undef */
+// /* eslint-disable no-undef */
 
 import { Router, routs } from "../tools/Router.ts";
-import store from "../tools/Store.ts";
-import Route from "../tools/Route.ts";
+import  store from "../tools/Store.ts";
+import  Route from "../tools/Route.ts";
 
 jest.mock("../tools/Store", () => ({
   __esModule: true,
@@ -19,13 +20,13 @@ jest.mock("../tools/Route", () => {
       rootQuery,
       render: jest.fn(),
       leave: jest.fn(),
-      match: jest.fn((path: string) => path === pathname),
+     match: jest.fn((path) => path === pathname),
     };
   });
 });
 
 describe("Router", () => {
-  let router: Router;
+  let router;
 
   beforeEach(() => {
     router = new Router("#app");

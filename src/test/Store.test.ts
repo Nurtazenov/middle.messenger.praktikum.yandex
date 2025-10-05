@@ -12,7 +12,7 @@ jest.mock("uuid", () => ({
   v4: jest.fn(() => "mocked-uuid"),
 }));
 
-class TestBlock extends Block {
+class TestStore extends Block {
   constructor(props: any) {
     super(props);
   }
@@ -59,7 +59,7 @@ describe("withStore HOC", () => {
 
 it("должен пробрасывать состояние в компонент при создании", () => {
   const mapStateToProps = jest.fn(() => ({ foo: "bar" }));
-  const Wrapped = withStore(mapStateToProps)(TestBlock);
+  const Wrapped = withStore(mapStateToProps)(TestStore);
 
   const component = new Wrapped({ baz: "qux" });
 
@@ -70,7 +70,7 @@ it("должен пробрасывать состояние в компонен
 
   it("должен обновлять props при изменении store", () => {
     const mapStateToProps = jest.fn((state) => ({ value: state.value || null }));
-    const Wrapped = withStore(mapStateToProps)(TestBlock);
+    const Wrapped = withStore(mapStateToProps)(TestStore);
     const component = new Wrapped({});
 
     jest.spyOn(component, "setProps");
@@ -83,7 +83,7 @@ it("должен пробрасывать состояние в компонен
   it("не должен обновлять props если состояние не изменилось", () => {
     (isEqual as jest.Mock).mockReturnValue(true); 
     const mapStateToProps = jest.fn(() => ({ test: "same" }));
-    const Wrapped = withStore(mapStateToProps)(TestBlock);
+    const Wrapped = withStore(mapStateToProps)(TestStore);
     const component = new Wrapped({});
 
     jest.spyOn(component, "setProps");

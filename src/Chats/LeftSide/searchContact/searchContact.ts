@@ -1,6 +1,6 @@
-import chatController from "../../../controller/chat.controller";
-import Block from "../../../tools/Block"
-import { router, routs } from "../../../tools/Router";
+import chatController from "../../../controller/chat.controller.ts";
+import Block from "../../../tools/Block.ts"
+import { router, routs } from "../../../tools/Router.ts";
 import template from './searchContact.hbs';
 import searchIcon from '../../../pictures/icons8-search.svg';
 import './searchContact.scss'

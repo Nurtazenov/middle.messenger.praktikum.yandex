@@ -35,8 +35,9 @@ interface State {
   
 class Store extends EventBus {
   private state: any = {};
-  emit: any;
-
+   constructor() {
+    super();
+  }
   public getState(): State {
     return this.state;
   }
