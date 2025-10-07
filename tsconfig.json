@@ -1,49 +1,57 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "types": ["jest"],
-    "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
-    "target": "ES6",
-    "useDefineForClassFields": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",  
+    /* --- Основные настройки --- */
+    "target": "ESNext",
+    "module": "ESNext",
     "lib": ["DOM", "ESNext"],
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "moduleResolution": "node16",
+    "types": ["jest"],
+    "allowJs": false,
+    "checkJs": false,
+
+    /* --- Безопасность и строгая типизация --- */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
+
+    /* --- Совместимость и комфорт разработки --- */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+
+    /* --- Вывод --- */
+    "noEmit": true,
+    "outDir": "./dist",
+    "sourceMap": true
   },
+
   "include": [
-    "src/**/*.ts",
     "src/**/*",
     "src/types/**/*",
     "custom.d.ts",
-    "./vite.config.ts",
-    "./server.js",
+    "vite.config.ts",
+    "server.js",
     "jest.config.cjs",
-    "./eslint.config.mjs",
-    "./.loaderrc.mjs",
-    "src/test/**/*.ts"
+    "eslint.config.mjs",
+    ".loaderrc.mjs",
+    "src/test/**/*"
   ],
+
   "exclude": [
     "node_modules",
-    "./node_modules",
-    "./node_modules/*",
-    "./node_modules/@types/node/index.d.ts",
     "dist",
-    "__dirname",
     "**/dist/**/*",
-    "**/__dirname/dist/**/*"
+    "**/__dirname/**"
   ]
 }
+
 
 
