@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "classic",
+    "moduleResolution": "Node",
     "lib": ["DOM", "ESNext"],
     "types": ["jest", "node"],
     "allowJs": false,
@@ -25,5 +25,6 @@
     "sourceMap": true,
   }
 }
+
 
 
