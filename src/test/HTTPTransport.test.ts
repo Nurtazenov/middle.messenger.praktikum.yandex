@@ -6,7 +6,7 @@ import  ErrorModal from "../components/Modal/ErrorModal.ts";
 
 jest.mock("../components/Modal/ErrorModal", () => jest.fn());
 describe("HTTPTransport", () => {
-  let xhrMock;
+  let xhrMock: { onload: any; open: any; status: any; statusText: any; onerror: any; ontimeout: any; setRequestHeader: any; send: any; withCredentials?: boolean; responseType?: string; response?: { ok: boolean; }; timeout?: number; };
 
   beforeEach(() => {
     xhrMock = {

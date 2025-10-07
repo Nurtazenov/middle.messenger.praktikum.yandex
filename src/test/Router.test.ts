@@ -26,7 +26,7 @@ jest.mock("../tools/Route", () => {
 });
 
 describe("Router", () => {
-  let router;
+  let router: Router;
 
   beforeEach(() => {
     router = new Router("#app");
