@@ -1,15 +1,12 @@
 {
   "compilerOptions": {
-    /* --- Основные настройки --- */
     "target": "ESNext",
-    "module": "ESNext",
+    "module": "node16",
     "lib": ["DOM", "ESNext"],
     "moduleResolution": "node16",
     "types": ["jest"],
     "allowJs": false,
     "checkJs": false,
-
-    /* --- Безопасность и строгая типизация --- */
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -17,8 +14,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
-
-    /* --- Совместимость и комфорт разработки --- */
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "useDefineForClassFields": true,
@@ -26,13 +21,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
-
-    /* --- Вывод --- */
     "noEmit": true,
     "outDir": "./dist",
     "sourceMap": true
   },
-
   "include": [
     "src/**/*",
     "src/types/**/*",
@@ -44,7 +36,6 @@
     ".loaderrc.mjs",
     "src/test/**/*"
   ],
-
   "exclude": [
     "node_modules",
     "dist",
@@ -52,6 +43,4 @@
     "**/__dirname/**"
   ]
 }
-
-
 
