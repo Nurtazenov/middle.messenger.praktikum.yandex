@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-        "strict": true,
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "types": ["jest"],
@@ -10,17 +10,14 @@
     "useDefineForClassFields": true,
     "module": "ESNext",  
     "lib": ["DOM", "ESNext"],
-    "skipLibCheck": true,
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "noEmit": true,
-    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "strictNullChecks": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist"
   },
