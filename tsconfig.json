@@ -5,7 +5,7 @@
     "skipLibCheck": true,
     "types": ["jest"],
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "target": "ES6",
     "useDefineForClassFields": true,
     "module": "ESNext",  
