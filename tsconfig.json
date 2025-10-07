@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "nodenext",
+    "moduleResolution": "classic",
     "lib": ["DOM", "ESNext"],
     "types": ["jest"],
     "allowJs": false,
@@ -19,7 +19,6 @@
     "useDefineForClassFields": true,
     "isolatedModules": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "outDir": "./dist",
