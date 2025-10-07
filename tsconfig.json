@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "node16",
+    "module": "ESNext",
+    "moduleResolution": "nodenext",
     "lib": ["DOM", "ESNext"],
-    "moduleResolution": "node16",
     "types": ["jest"],
     "allowJs": false,
     "checkJs": false,
@@ -24,23 +24,5 @@
     "noEmit": true,
     "outDir": "./dist",
     "sourceMap": true
-  },
-  "include": [
-    "src/**/*",
-    "src/types/**/*",
-    "custom.d.ts",
-    "vite.config.ts",
-    "server.js",
-    "jest.config.cjs",
-    "eslint.config.mjs",
-    ".loaderrc.mjs",
-    "src/test/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/dist/**/*",
-    "**/__dirname/**"
-  ]
+  }
 }
-

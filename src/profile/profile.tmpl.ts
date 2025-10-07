@@ -1,18 +1,18 @@
-import Block from '../tools/Block';
-import store, { withStore } from '../tools/Store';
+import Block from '../tools/Block.ts';
+import store, { withStore } from '../tools/Store.ts';
 import './Profile.scss';
 import template from "./profile.hbs";
 import union from '../pictures/avatrar.jpg'
-import { IUser } from '../api/user.interface';
+import { IUser } from '../api/user.interface.ts';
 import arrowBtn from './../pictures/arrowBtn.png'
-import { api_url } from '../api/api.const';
-import { router, routs } from '../tools/Router';
-import ErrorModal from '../components/Modal/ErrorModal';
-import userController from '../controller/user.controller';
-import auth from '../controller/auth.controller';
-import Button from '../components/Button/Button';
-import { validateForm } from '../Auth/validate';
-import { createButtons, createInputs } from '../const/profile/profile';
+import { api_url } from '../api/api.const.ts';
+import { router, routs } from '../tools/Router.ts';
+import ErrorModal from '../components/Modal/ErrorModal.ts';
+import userController from '../controller/user.controller.ts';
+import auth from '../controller/auth.controller.ts';
+import Button from '../components/Button/Button.ts';
+import { validateForm } from '../Auth/validate.ts';
+import { createButtons, createInputs } from '../const/profile/profile.ts';
 
 const avatarPath =  `${api_url}/resources/`; 
 class setProfile extends Block {
