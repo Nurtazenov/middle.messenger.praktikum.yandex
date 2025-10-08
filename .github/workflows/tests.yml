@@ -5,6 +5,7 @@ on:
     branches:
       - main
 
+
 jobs:
   test:
     if: ${{github.head_ref == 'sprint_1' || github.head_ref == 'sprint_2' || github.head_ref == 'sprint_3' || github.head_ref == 'sprint_4'}}
