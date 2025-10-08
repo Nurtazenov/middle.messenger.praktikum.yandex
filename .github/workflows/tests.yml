@@ -4,6 +4,12 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - sprint_1
+      - sprint_2
+      - sprint_3
+      - sprint_4
 
 jobs:
   test:
