@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 module.exports = {
   preset: "ts-jest",
-  testEnvironment: "jsdom", // для DOM
+  testEnvironment: "jsdom",
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
