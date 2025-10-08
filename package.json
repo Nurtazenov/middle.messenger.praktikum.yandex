@@ -68,7 +68,6 @@
     "express": "^4.21.2",
     "fast-redact": "^3.3.0",
     "highlight.js": "^11.9.0",
-    "husky": "^9.1.7",
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "micromatch": "^4.0.8",
