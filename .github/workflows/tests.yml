@@ -48,7 +48,3 @@ jobs:
 
     - name: Run tests (server)
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/node_build.bats
-
-
-
-
