@@ -11,6 +11,9 @@ jobs:
       SPRINT: ${{ github.head_ref }}
       TERM: xterm-256color
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20.18.1.x]
     steps:
       - name: Set up GitHub Actions
         uses: actions/checkout@v3
