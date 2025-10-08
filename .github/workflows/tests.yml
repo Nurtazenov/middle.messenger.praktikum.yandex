@@ -52,4 +52,4 @@ jobs:
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_4.bats
 
     - name: Run server tests
-      run: bats --formatter pretty /tmp/tests-middle-frontend/tests/node_build.bats
+      run: bats --formatter pretty /tmp/tests-middle-frontend/tests
