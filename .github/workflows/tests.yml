@@ -4,46 +4,48 @@ on:
   pull_request:
     branches:
       - main
-
 jobs:
   test:
     env:
+      SPRINT: ${{github.head_ref}}
       TERM: xterm-256color
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [21.x]
-
     steps:
-    - name: Checkout repository
+    - name: Set up GitHub Actions
       uses: actions/checkout@v3
-
-    - name: Setup Node.js ${{ matrix.node-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-
-    - name: Install Bats testing framework
+    - name: Сheck if the repository is private
+      if: ${{github.event.repository.private}}
+      run: exit 1
+    - name: Install testing libs
       uses: mig4/setup-bats@v1
+    - name: Get testing lib
+      run: set -eu && git clone https://github.com/Yandex-Practicum/tests-middle-frontend.git /tmp/tests-middle-frontend
 
-    - name: Clone testing library
-      run: git clone https://github.com/Yandex-Practicum/tests-middle-frontend.git /tmp/tests-middle-frontend
-
-    - name: Run sprint_1 tests
+    - name: Run tests (sprint_1)
+      if: ${{github.head_ref >= 'sprint_1'}}
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_1.bats
 
-    - name: Run sprint_2 tests
+    - name: Run tests (sprint_2)
+      if: ${{github.head_ref >= 'sprint_2'}}
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_2.bats
 
-    - name: Run sprint_3 tests
+    - name: Run tests (sprint_3)
+      if: ${{github.head_ref >= 'sprint_3'}}
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_3.bats
 
-    - name: Run sprint_4 tests
+    - name: Run tests (sprint_4)
+      if: ${{github.head_ref >= 'sprint_4'}}
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_4.bats
 
-    - name: Run server tests
+    - name: Run tests (server)
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/node_build.bats
-
 
 
 
