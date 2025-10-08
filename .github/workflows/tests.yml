@@ -7,8 +7,9 @@ on:
 
 jobs:
   test:
+    if: ${{github.head_ref == 'sprint_1' || github.head_ref == 'sprint_2' || github.head_ref == 'sprint_3' || github.head_ref == 'sprint_4'}}
     env:
-      SPRINT: ${{github.head_ref}}
+      # SPRINT: ${{github.head_ref}}
       TERM: xterm-256color
     runs-on: ubuntu-latest
     strategy:
@@ -21,6 +22,9 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Сheck if the repository is private
+      if: ${{github.event.repository.private}}
+      run: exit 1
     - name: Install testing libs
       uses: mig4/setup-bats@v1
     - name: Get testing lib
