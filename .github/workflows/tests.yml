@@ -4,12 +4,6 @@ on:
   pull_request:
     branches:
       - main
-  push:
-    branches:
-      - sprint_1
-      - sprint_2
-      - sprint_3
-      - sprint_4
 
 jobs:
   test:
@@ -36,25 +30,16 @@ jobs:
       run: git clone https://github.com/Yandex-Practicum/tests-middle-frontend.git /tmp/tests-middle-frontend
 
     - name: Run sprint_1 tests
-      if: startsWith(github.ref, 'refs/heads/sprint_1') || github.event.pull_request.head.ref == 'sprint_1'
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_1.bats
 
     - name: Run sprint_2 tests
-      if: startsWith(github.ref, 'refs/heads/sprint_2') || github.event.pull_request.head.ref == 'sprint_2'
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_2.bats
 
     - name: Run sprint_3 tests
-      if: startsWith(github.ref, 'refs/heads/sprint_3') || github.event.pull_request.head.ref == 'sprint_3'
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_3.bats
 
     - name: Run sprint_4 tests
-      if: startsWith(github.ref, 'refs/heads/sprint_4') || github.event.pull_request.head.ref == 'sprint_4'
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/sprint_4.bats
 
     - name: Run server tests
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/node_build.bats
-
-
-
-
-
