@@ -4,10 +4,12 @@ on:
   pull_request:
     branches:
       - main
+
 jobs:
   test:
     if: ${{github.head_ref == 'sprint_1' || github.head_ref == 'sprint_2' || github.head_ref == 'sprint_3' || github.head_ref == 'sprint_4'}}
     env:
+      SPRINT: ${{github.head_ref}}
       TERM: xterm-256color
     runs-on: ubuntu-latest
     strategy:
@@ -46,7 +48,3 @@ jobs:
 
     - name: Run tests (server)
       run: bats --formatter pretty /tmp/tests-middle-frontend/tests/node_build.bats
-
-
-
-
