@@ -1,5 +1,6 @@
-import EventBus from './EventBus';
-import { v4 as uuidv4 } from "uuid";
+/* eslint-disable no-unused-vars */
+import { v4 as uuid4 } from "uuid";
+import EventBus from './EventBus.ts';
 
 type Props = Record<string, any>;
 
@@ -11,7 +12,7 @@ class Block {
     FLOW_RENDER: "flow:render",
   };
 
-  public id = uuidv4(6);
+  public id = uuid4(6);
   protected props: Props;
   protected refs: Record<string, Block> = {};
   public children: Record<string, Block>;
@@ -152,7 +153,7 @@ class Block {
     this._addEvents();
   }
 
-  protected compile(template: (context: Props) => string, context: any) {
+   compile(template: (context: Props) => string, context: any) {
     const contextAndStubs = { ...context, __refs: this.refs };
     const html = template(contextAndStubs);
 

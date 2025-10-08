@@ -1,4 +1,5 @@
-import Block from "../../tools/Block";
+/* eslint-disable no-unused-vars */
+import Block from "../../tools/Block.ts";
 import templateButton from "./button.hbs";
 import './Button.scss';
 interface PropsButton {

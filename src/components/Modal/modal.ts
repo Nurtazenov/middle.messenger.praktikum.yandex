@@ -1,4 +1,4 @@
-import Block from "../../tools/Block";
+import Block from "../../tools/Block.ts";
 import modal from "./modal.hbs";
 import './modal.scss'
 interface IModalProps{

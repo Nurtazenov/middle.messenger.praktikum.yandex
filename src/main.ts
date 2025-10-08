@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import  setChat  from './Chats/chats.ts';
 import chatController from './controller/chat.controller.ts';
 import setRegister from './Auth/signUp/register.ts';

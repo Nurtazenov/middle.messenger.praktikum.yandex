@@ -1,5 +1,5 @@
-import Block from "../tools/Block";
-import { router, routs } from "../tools/Router";
+import Block from "../tools/Block.ts";
+import { router, routs } from "../tools/Router.ts";
 import template from './error.hbs'
 import './error.scss'
 interface ErrorPageProps {

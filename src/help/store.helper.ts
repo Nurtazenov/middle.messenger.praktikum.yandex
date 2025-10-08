@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 type Indexed<T = unknown> = {
   [key in string]: T;
 };

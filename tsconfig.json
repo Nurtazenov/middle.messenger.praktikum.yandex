@@ -1,35 +1,29 @@
 {
   "compilerOptions": {
-    "noImplicitAny": true,
-    "target": "es6",
-    "useDefineForClassFields": true,
-    "module": "commonjs",
-    "lib": ["es6", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "classic",
+    "lib": ["DOM", "ESNext"],
+    "types": ["jest", "node"],
+    "allowJs": false,
+    "checkJs": false,
     "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "./dist"
-  },
-  
-  "include": ["src/**/*.ts","src/**/*", "src/types/**/*", "custom.d.ts"],
-
-  "exclude": [
-    "node_modules",
-    "./node_modules",
-    "./node_modules/*",
-    "./node_modules/@types/node/index.d.ts"
-  ]
-
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+  }
 }
 
 

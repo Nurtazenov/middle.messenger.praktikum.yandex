@@ -1,20 +1,19 @@
-import '../../help/index'
-import { HelperOptions } from "handlebars"
-import Block from "../../tools/Block";
-import Form from "../form/form";
-import Input from '../Input/Input';
-import Popup from "../popup/popup";
-import { LeftPanel } from "../../Chats/LeftSide/leftSide";
-import { ChatList } from "../../Chats/LeftSide/chatList/chatList";
-import SearchContact from "../../Chats/LeftSide/searchContact/searchContact";
-import Contacts from "../../Chats/LeftSide/cotacts/contacts";
-import Dialog from "../../Chats/RightSide/Dialog/Dialog";
-import InputBar from "../../Chats/RightSide/InputBar/InputBar";
-import Message from "../../Chats/RightSide/message/message";
-import RightSide from "../../Chats/RightSide/rightSide";
-import Button from "../Button/Button";
-import Handlebars from 'handlebars';
-import Modal from '../Modal/modal';
+import '../../help/index.ts'
+import Block from "../../tools/Block.ts";
+import Form from "../form/form.ts";
+import Input from '../Input/Input.ts';
+import Popup from "../popup/popup.ts";
+import { LeftPanel } from "../../Chats/LeftSide/leftSide.ts";
+import { ChatList } from "../../Chats/LeftSide/chatList/chatList.ts";
+import SearchContact from "../../Chats/LeftSide/searchContact/searchContact.ts";
+import Contacts from "../../Chats/LeftSide/cotacts/contacts.ts";
+import Dialog from "../../Chats/RightSide/Dialog/Dialog.ts";
+import InputBar from "../../Chats/RightSide/InputBar/InputBar.ts";
+import Message from "../../Chats/RightSide/message/message.ts";
+import RightSide from "../../Chats/RightSide/rightSide.ts";
+import Button from "../Button/Button.ts";
+import Handlebars, { HelperOptions } from 'handlebars';
+import Modal from '../Modal/modal.ts';
 export function registerComponent(name: string, Component: typeof Block) {
   if (name in Handlebars.helpers) {
     throw `The ${name} component is already registered!`;
@@ -50,7 +49,7 @@ export function registerComponent(name: string, Component: typeof Block) {
       return `<div ${dataAttribute}>${contents}</div>`;
     }
   );
-};
+}
 
 registerComponent("Form", Form);
 registerComponent("Button", Button);

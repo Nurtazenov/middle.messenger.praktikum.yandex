@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 type EventCallback = (...args: unknown[]) => void;
  export default class EventBus {
   private listeners: Record<string, EventCallback[]> = {};

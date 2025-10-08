@@ -1,8 +1,9 @@
-import { IMessage } from "../Chats/RightSide/message/message.interface";
-import store from "../tools/Store";
-import WSTransport, { WSTransportEvents } from "../tools/WebSocket";
-import chatController from "./chat.controller";
-import processMessages from "./processMessages";
+/* eslint-disable no-empty */
+import { IMessage } from "../Chats/RightSide/message/message.interface.ts";
+import store from "../tools/Store.ts";
+import WSTransport, { WSTransportEvents } from "../tools/WebSocket.ts";
+import chatController from "./chat.controller.ts";
+import processMessages from "./processMessages.ts";
 
 class MessagesController {
     private sockets: Map<number, WSTransport> = new Map();
@@ -76,7 +77,6 @@ class MessagesController {
       if (socket.readyState === WebSocket.OPEN) {
         socket.send({ type: "get old", content: "0" });
       } else {
-
       }
     } catch (e) {
     }
