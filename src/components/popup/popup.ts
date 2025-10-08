@@ -1,10 +1,11 @@
-import Block from "../../tools/Block";
+import Block from "../../tools/Block.ts";
 import template from './popup.hbs';
 import './popup.scss';
 interface PopupProps {
   onClick: () => void;
   visibility: string;
   events: {
+    // eslint-disable-next-line no-unused-vars
     click: (event: MouseEvent) => void;
   };
 }

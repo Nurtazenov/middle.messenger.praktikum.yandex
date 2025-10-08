@@ -1,9 +1,9 @@
-import chatController from "../../../controller/chat.controller";
-import Block from "../../../tools/Block";
+import chatController from "../../../controller/chat.controller.ts";
+import Block from "../../../tools/Block.ts";
 import union from "../../../pictures/avatrar.jpg";
 import template from "./contacts.hbs";
 import "./contacts.scss";
-import { api_url } from "../../../api/api.const";
+import { api_url } from "../../../api/api.const.ts";
 export interface IContact {
   chatId: any;
   avatar: string;

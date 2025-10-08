@@ -1,14 +1,14 @@
-import Block from "../../../tools/Block";
-import store from "../../../tools/Store";
+import Block from "../../../tools/Block.ts";
+import store from "../../../tools/Store.ts";
 import union from '../../../pictures/avatrar.jpg'
-import chatController from "../../../controller/chat.controller";
-import { IUser } from "../../../api/user.interface";
-import userController from "../../../controller/user.controller";
-import ErrorModal from "../../../components/Modal/ErrorModal";
+import chatController from "../../../controller/chat.controller.ts";
+import { IUser } from "../../../api/user.interface.ts";
+import userController from "../../../controller/user.controller.ts";
+import ErrorModal from "../../../components/Modal/ErrorModal.ts";
 import template from './Dialog.hbs';
 import ellipseIcon from './../../../pictures/mnogotochie_nn6wzi83jzzh.svg';
 import './Dialog.scss'
-import { api_url } from "../../../api/api.const";
+import { api_url } from "../../../api/api.const.ts";
 export default class Dialog extends Block{
  constructor() {
     const selectedChatId = store.getState().selectedChat;

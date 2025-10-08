@@ -1,5 +1,6 @@
-import { render } from "../components/dom/render";
-import Block from "./Block";
+/* eslint-disable no-unused-vars */
+import { render } from "../components/dom/render.ts";
+import Block from "./Block.ts";
 
 
 function isEqual(lhs: string, rhs: string): boolean {

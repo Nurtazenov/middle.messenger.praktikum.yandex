@@ -1,6 +1,6 @@
-import { ChatInfo } from "../../api/chat-api";
-import Block from "../../tools/Block";
-import { withStore } from "../../tools/Store";
+import { ChatInfo } from "../../api/chat-api.ts";
+import Block from "../../tools/Block.ts";
+import { withStore } from "../../tools/Store.ts";
 import template from './leftSide.hbs';
 import './leftSide.scss';
 interface ILeftPanel{

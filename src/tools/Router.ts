@@ -1,8 +1,27 @@
+/* eslint-disable no-unused-vars */
 
-import Block from "./Block";
-import Route from "./Route";
-import store from "./Store";
+import Block from "./Block.ts";
+import Route from "./Route.ts";
+import store from "./Store.ts";
 export class Router {
+  static back() {
+      throw new Error("Method not implemented.");
+  }
+  static forward() {
+      throw new Error("Method not implemented.");
+  }
+  static getRoute(_error: string) {
+      throw new Error("Method not implemented.");
+  }
+  static go(_arg0: string) {
+      throw new Error("Method not implemented.");
+  }
+  static use(_arg0: string, _BlockMock: typeof Block) {
+      throw new Error("Method not implemented.");
+  }
+  static reset() {
+      throw new Error("Method not implemented.");
+  }
   private static __instance?: Router;
   private routes: Route[] = [];
   private currentRoute: Route | null = null;

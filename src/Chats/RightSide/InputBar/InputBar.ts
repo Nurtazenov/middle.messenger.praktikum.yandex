@@ -1,5 +1,5 @@
-import messagesController from "../../../controller/message.controller";
-import Block from "../../../tools/Block";
+import messagesController from "../../../controller/message.controller.ts";
+import Block from "../../../tools/Block.ts";
 import template from './InputBar.hbs';
 import arrowBtn from './../../../pictures/ArrowRight.svg';
 import paperclip from './../../../pictures/Paper.svg';

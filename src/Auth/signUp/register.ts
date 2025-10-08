@@ -1,8 +1,8 @@
-import "../auth.scss";
 import template from './register.hbs'
-import Block from '../../tools/Block';
-import { createButtons, createInputs } from '../../const/signup/signup';
-import auth from '../../controller/auth.controller';
+import Block from '../../tools/Block.ts';
+import { createButtons, createInputs } from '../../const/signup/signup.ts';
+import auth from '../../controller/auth.controller.ts';
+import './register.scss'
 const handleFormSubmit = (e: Event) => {
   e.preventDefault();
   const form = e.target as HTMLFormElement;

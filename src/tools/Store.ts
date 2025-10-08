@@ -1,9 +1,10 @@
-import { ChatInfo } from "../api/chat-api";
-import { IUser } from "../api/user.interface";
-import { set } from "../help/store.helper";
-import Block from "./Block";
-import EventBus from "./EventBus";
-import isEqual from "./isEqual";
+/* eslint-disable no-unused-vars */
+import { ChatInfo } from "../api/chat-api.ts";
+import { IUser } from "../api/user.interface.ts";
+import { set } from "../help/store.helper.ts";
+import Block from "./Block.ts";
+import EventBus from "./EventBus.ts";
+import isEqual from "./isEqual.ts";
 interface IMessage {
   id: number;
   chat_id: number;
@@ -34,7 +35,9 @@ interface State {
   
 class Store extends EventBus {
   private state: any = {};
-
+   constructor() {
+    super();
+  }
   public getState(): State {
     return this.state;
   }

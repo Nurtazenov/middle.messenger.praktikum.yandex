@@ -1,5 +1,5 @@
-import Block from "../../../tools/Block";
-import { IContact } from "../cotacts/contacts";
+import Block from "../../../tools/Block.ts";
+import { IContact } from "../cotacts/contacts.ts";
 import template from'./chatList.hbs'
 import './chatList.scss'
 

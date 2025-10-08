@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {HTTPTransport} from "../tools/HTTPTransport";
 export abstract class BaseAPI {
   protected http: HTTPTransport;
