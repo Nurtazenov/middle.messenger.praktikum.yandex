@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "classic",
+    "moduleResolution": "node16",
     "lib": ["DOM", "ESNext"],
     "types": ["jest", "node"],
     "allowJs": false,
@@ -22,7 +22,7 @@
     "allowImportingTsExtensions": true,
     "noEmit": true,
     "outDir": "./dist",
-    "sourceMap": true,
+    "sourceMap": true
   }
 }
 

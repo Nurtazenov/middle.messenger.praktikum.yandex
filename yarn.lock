@@ -10064,6 +10064,11 @@ sass-embedded@^1.70.0, sass-embedded@^1.86.0:
     sass-embedded-win32-ia32 "1.89.0"
     sass-embedded-win32-x64 "1.89.0"
 
+save-dev@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.npmjs.org/save-dev/-/save-dev-0.0.1-security.tgz"
+  integrity sha512-k6knZTDNK8PKKbIqnvxiOveJinuw2LcQjqDoaorZWP9M5AR2EPsnpDeSbeoZZ0pHr5ze1uoaKdK8NBGQrJ34Uw==
+
 sax@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmjs.org/sax/-/sax-1.4.1.tgz"
