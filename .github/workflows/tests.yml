@@ -22,9 +22,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Сheck if the repository is private
-      if: ${{github.event.repository.private}}
-      run: exit 1
     - name: Install testing libs
       uses: mig4/setup-bats@v1
     - name: Get testing lib
