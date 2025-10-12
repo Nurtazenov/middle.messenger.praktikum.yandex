@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import {HTTPTransport} from "../tools/HTTPTransport";
+import {HTTPTransport} from "../tools/HTTPTransport.ts";
 export abstract class BaseAPI {
   protected http: HTTPTransport;
 

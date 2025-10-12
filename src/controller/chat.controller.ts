@@ -1,8 +1,8 @@
-import chatAPI, { ChatsAPI } from "../api/chat-api";
-import store from "../tools/Store";
-import { IUser } from "../api/user.interface";
-import ErrorModal from "../components/Modal/ErrorModal";
-import messagesController from "./message.controller";
+import chatAPI, { ChatsAPI } from "../api/chat-api.ts";
+import store from "../tools/Store.ts";
+import { IUser } from "../api/user.interface.ts";
+import ErrorModal from "../components/Modal/ErrorModal.ts";
+import messagesController from "./message.controller.ts";
 
 class ChatsController {
   private readonly api: ChatsAPI;

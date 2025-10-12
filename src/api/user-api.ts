@@ -1,7 +1,7 @@
 /* eslint-disable no-empty */
-import ErrorModal from "../components/Modal/ErrorModal";
-import { BaseAPI } from "./base-api";
-import { IChangePassword, IUser } from "./user.interface";
+import ErrorModal from "../components/Modal/ErrorModal.ts";
+import { BaseAPI } from "./base-api.ts";
+import { IChangePassword, IUser } from "./user.interface.ts";
 
 class UsersApi extends BaseAPI {
   constructor() {
