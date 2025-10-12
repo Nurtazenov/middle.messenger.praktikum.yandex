@@ -1,9 +1,9 @@
-import { ChatInfo } from "../api/chat-api";
-import chatController from "../controller/chat.controller";
-import Block from "../tools/Block";
-import { withStore } from "../tools/Store";
+import { ChatInfo } from "../api/chat-api.ts";
+import chatController from "../controller/chat.controller.ts";
+import Block from "../tools/Block.ts";
+import { withStore } from "../tools/Store.ts";
 import template from "./chat.hbs"
-import { IMessage } from "./RightSide/message/message.interface";
+import { IMessage } from "./RightSide/message/message.interface.ts";
 import './chat.scss';
 
 interface PropsMainPage {
