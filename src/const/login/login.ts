@@ -1,7 +1,6 @@
-import Button from "../../components/Button/Button";
-import Input from "../../components/Input/Input";
-
-import { router, routs } from "../../tools/Router";
+import Button from "../../components/Button/Button.ts";
+import Input from "../../components/Input/Input.ts";
+import { router, routs } from "../../tools/Router.ts";
 
 export const createInputs = () => [
   new Input({

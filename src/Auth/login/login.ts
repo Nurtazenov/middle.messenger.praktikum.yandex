@@ -1,10 +1,10 @@
 import template from "./login.hbs"
-import Block from '../../tools/Block';
-import auth from '../../controller/auth.controller';
-import { createButtons, createInputs } from '../../const/login/login';
-import { initializeValidationListeners } from '../validate';
-import { withStore } from "../../tools/Store";
-import { IUser } from "../../api/user.interface";
+import Block from '../../tools/Block.ts';
+import auth from '../../controller/auth.controller.ts';
+import { createButtons, createInputs } from '../../const/login/login.ts';
+import { initializeValidationListeners } from '../validate.ts';
+import { withStore } from "../../tools/Store.ts";
+import { IUser } from "../../api/user.interface.ts";
 import './login.scss';
 
 const handleFormSubmit = (e: Event) => {

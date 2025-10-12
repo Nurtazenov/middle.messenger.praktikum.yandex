@@ -1,7 +1,7 @@
-import { IUser } from "../../api/user.interface";
-import Button from "../../components/Button/Button";
-import Input from "../../components/Input/Input";
-import auth from "../../controller/auth.controller";
+import { IUser } from "../../api/user.interface.ts";
+import Button from "../../components/Button/Button.ts";
+import Input from "../../components/Input/Input.ts";
+import auth from "../../controller/auth.controller.ts";
 
 export const createInputs = (userData: IUser, isEditing: boolean) => {
   return [

@@ -1,5 +1,5 @@
-import { BaseAPI } from "./base-api";
-import { ILogin, ISignUp, IUser } from "./user.interface";
+import { BaseAPI } from "./base-api.ts";
+import { ILogin, ISignUp, IUser } from "./user.interface.ts";
 
 class AuthApi extends BaseAPI {
     constructor() {

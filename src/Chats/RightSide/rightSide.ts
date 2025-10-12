@@ -1,8 +1,8 @@
-import chatController from "../../controller/chat.controller";
-import Block from "../../tools/Block";
-import { withStore } from "../../tools/Store";
+import chatController from "../../controller/chat.controller.ts";
+import Block from "../../tools/Block.ts";
+import { withStore } from "../../tools/Store.ts";
 import union from './../../pictures/avatrar.jpg'
-import { IMessage } from "./message/message.interface";
+import { IMessage } from "./message/message.interface.ts";
 import template from './rightSide.hbs'
 import './rightSide.scss'
 export  interface PropsMessages {
