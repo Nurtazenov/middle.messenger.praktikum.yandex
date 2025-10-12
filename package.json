@@ -10,7 +10,7 @@
     "braces": "^3.0.3"
   },
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "husky",
     "dev": "vite --port 3000",
     "build": "vite build",
     "start": "vite build && node server.js",
