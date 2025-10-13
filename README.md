@@ -14,7 +14,7 @@ SPA приложения созданным с использованием Vani
 - `npm run compile`- скомпилировать ES6 TypeScript в папку /lib. 
 В проекте использовался макет из; Figma: https://www.figma.com/design/jf5fffzggoxqeb4cmkwtie/chat_external_link?node-id=0-1&p=f&t=5xktgghqrpvriea0-0
 
-проет задеплоин на сайте netlify: https://famous-blini-495b5b.netlify.app
+проет задеплоин на сайте netlify: https://preeminent-sundae-7f9800.netlify.app/
 а также этот проект задеплоин на GitHub Pages: https://nurtazenov.github.io/middle.messenger.praktikum.yandex/
 инструменты:
 stylelint
